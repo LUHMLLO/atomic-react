@@ -1,0 +1,27 @@
+import React from 'react';
+import Icon from '@/components/atoms/icon';
+import Text from '@/components/atoms/text';
+
+interface Props {
+	text: string;
+	variant: string;
+	className?: string;
+	filled?: boolean;
+}
+
+const YourComponent: React.FC<Props> = (props) => {
+	return (
+		<span
+			className={`inline-flex items-center rounded-5xs p-5xs w-max bg-neutral-900 text-neutral-400 ${props.className}`}>
+			{props.variant === 'icon' && (
+				<Icon name={props.text} filled={props.filled} />
+			)}
+
+			{props.variant === 'text' && (
+				<Text tag='span' text={props.text} className='text-2xs' />
+			)}
+		</span>
+	);
+};
+
+export default YourComponent;
