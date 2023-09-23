@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Styles from '@/commons/styles/components/radio.module.scss';
 
 interface Props {
 	groupName: string;
@@ -6,17 +7,25 @@ interface Props {
 	className?: string;
 }
 
-const RadioButton: React.FC<Props> = (props) => {
-	const { groupName, checked, className } = props;
+const Radio: React.FC<Props> = ({
+	groupName = '',
+	checked = false,
+	className = '',
+}) => {
+	const [isChecked, setIsChecked] = useState(checked);
 
 	return (
 		<input
 			type='radio'
-			className={className}
+			className={`${className} ${Styles}`}
 			name={groupName}
-			checked={checked}
+			checked={isChecked}
+			onChange={() => {
+				console.log('ola');
+				setIsChecked(!isChecked);
+			}}
 		/>
 	);
 };
 
-export default RadioButton;
+export default Radio;

@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 interface Props {
 	name: string;
@@ -6,15 +6,17 @@ interface Props {
 	filled?: boolean;
 }
 
-const Icon: React.FC<Props> = (props) => {
-	const { name, className, filled } = props;
-
-	const iconStyle: React.CSSProperties = {
-		fontVariationSettings: `FILL ${filled ? 1 : 0}`,
+const Icon: React.FC<Props> = ({
+	name,
+	className = '',
+	filled = false,
+}) => {
+	const style = {
+		fontVariationSettings: filled ? "'FILL' 1" : "'FILL' 0",
 	};
 
 	return (
-		<i className={`material-symbols-rounded ${className}`} style={iconStyle}>
+		<i className={`material-symbols-rounded ${className}`} style={style}>
 			{name}
 		</i>
 	);

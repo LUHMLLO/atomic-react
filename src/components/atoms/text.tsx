@@ -1,4 +1,5 @@
 import React from 'react';
+import { allowedScales, allowedTextTags } from '@/commons/logic/atomicRules';
 
 interface Props {
 	tag: string;
@@ -7,22 +8,12 @@ interface Props {
 	scale?: string;
 }
 
-const allowedScales = ['xs', 'sm', 'md', 'lg', 'xl']; // Define your allowed scales
-const allowedTextTags = [
-	'span',
-	'div',
-	'p',
-	'h1',
-	'h2',
-	'h3',
-	'h4',
-	'h5',
-	'h6',
-]; // Define your allowed text tags
-
-const Text: React.FC<Props> = (props) => {
-	const { tag, text, className, scale } = props;
-
+const Text: React.FC<Props> = ({
+	tag,
+	text,
+	className = '',
+	scale = '',
+}) => {
 	if (!allowedTextTags.includes(tag)) {
 		throw new Error(`Invalid or unauthorized tag provided: ${tag}`);
 	}

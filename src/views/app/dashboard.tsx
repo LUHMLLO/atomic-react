@@ -1,4 +1,4 @@
-export default function Dashboard() {
+export default function Route() {
 	return (
 		<div>
 			<h1>Welcome to my app</h1>

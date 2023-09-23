@@ -14,32 +14,24 @@ interface Props {
 	trailing_icon_fill?: boolean;
 }
 
-const Button: React.FC<Props> = (props) => {
-	const {
-		borderless,
-		className,
-		filled,
-		flat,
-		leading_icon,
-		leading_icon_fill,
-		text,
-		trailing_icon,
-		trailing_icon_fill,
-	} = props;
-
-	const buttonClasses = [
-		'inline-flex items-center gap-3xs max-w-full',
-		!borderless && 'border-2 border-neutral-600',
-		filled && 'bg-neutral-900',
-		!flat && 'rounded-5xs',
-		text ? 'px-sm py-xs' : 'p-5xs',
-		className,
-	]
-		.filter(Boolean)
-		.join(' ');
-
+const Button: React.FC<Props> = ({
+	borderless,
+	className,
+	filled,
+	flat,
+	leading_icon,
+	leading_icon_fill,
+	text,
+	trailing_icon,
+	trailing_icon_fill,
+}) => {
 	return (
-		<button className={buttonClasses}>
+		<button
+			className={`inline-flex items-center gap-3xs max-w-full ${
+				!borderless && 'border-2 border-neutral-600'
+			} ${filled && 'bg-neutral-900'} ${!flat && 'rounded-5xs'} ${
+				text ? 'px-sm py-xs' : 'p-5xs'
+			} ${className}`}>
 			{leading_icon && <Icon name={leading_icon} filled={leading_icon_fill} />}
 			{text && (
 				<Text

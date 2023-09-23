@@ -9,7 +9,7 @@ interface Props {
 	filled?: boolean;
 }
 
-const YourComponent: React.FC<Props> = (props) => {
+const Badge: React.FC<Props> = (props) => {
 	return (
 		<span
 			className={`inline-flex items-center rounded-5xs p-5xs w-max bg-neutral-900 text-neutral-400 ${props.className}`}>
@@ -24,4 +24,4 @@ const YourComponent: React.FC<Props> = (props) => {
 	);
 };
 
-export default YourComponent;
+export default Badge;

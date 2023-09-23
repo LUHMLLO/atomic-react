@@ -1,0 +1,61 @@
+input {
+	&[type='checkbox'] {
+		appearance: none;
+		cursor: pointer;
+
+		background-color: transparent;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+
+		border: none;
+		outline: none;
+		padding: 0;
+		border-radius: 0;
+
+		aspect-ratio: 1/1;
+		@apply w-xl;
+		@apply h-xl;
+		overflow: hidden;
+	}
+
+	&[type='checkbox'] {
+		&::before {
+			font-family: 'Material Symbols Rounded';
+			content: 'check_box_outline_blank';
+
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+
+			@apply text-2xl;
+
+			vertical-align: middle;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				@apply text-accent-400;
+			}
+		}
+
+		&:focus {
+			@apply text-accent-500;
+		}
+
+		&:active {
+			@apply text-accent-600;
+		}
+
+		&:checked {
+			@apply text-accent-500;
+
+			&::before {
+				content: 'check_box';
+				font-variation-settings: 'FILL' 1;
+			}
+		}
+	}
+}
