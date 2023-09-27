@@ -33,20 +33,6 @@
 			vertical-align: middle;
 		}
 
-		@media (hover: hover) {
-			&:hover {
-				@apply text-accent-400;
-			}
-		}
-
-		&:focus {
-			@apply text-accent-600;
-		}
-
-		&:active {
-			@apply text-accent-600;
-		}
-
 		&:checked {
 			@apply text-accent-600;
 
@@ -54,6 +40,16 @@
 				content: 'check_box';
 				font-variation-settings: 'FILL' 1;
 			}
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				@apply text-accent-400;
+			}
+		}
+
+		&:active {
+			@apply text-accent-600;
 		}
 	}
 }

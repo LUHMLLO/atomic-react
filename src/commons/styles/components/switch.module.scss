@@ -21,23 +21,17 @@
     }
 
     &:not(:checked) {
-        @apply text-zinc-300;
-
         &::before {
             content: 'toggle_off';
         }
     }
 
     &:checked {
-        @apply text-accent-600;
+        @apply text-accent-500;
 
         &::before {
             content: 'toggle_on';
         }
-    }
-
-    &:focus {
-        @apply text-accent-600;
     }
 
     @media (hover: hover) {
@@ -47,7 +41,7 @@
     }
 
     &:active {
-        @apply text-accent-700;
+        @apply text-accent-600;
     }
 
 
