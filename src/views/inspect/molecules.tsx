@@ -88,6 +88,36 @@ export default function Route(): JSX.Element {
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
+				<Field
+					label='username'
+					leading_icon='person'
+					placeholder='Labeled input'
+				/>
+				<Field
+					label='password'
+					leading_icon='person'
+					placeholder='Labeled + Captioned'
+					caption='invalid username or password'
+				/>
+			</div>
+
+			<div className={`flex-col ${DocBox}`}>
+				<Field
+					borderless
+					label='username'
+					leading_icon='person'
+					placeholder='Borderless'
+				/>
+				<Field
+					borderless
+					label='password'
+					leading_icon='person'
+					placeholder='Borderless'
+					caption='invalid username or password'
+				/>
+			</div>
+
+			<div className={`flex-col ${DocBox}`}>
 				<Kbd
 					leading='keyboard_command_key'
 					leading_variant='icon'

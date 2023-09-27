@@ -25,9 +25,11 @@ export const allowedScales: string[] = [
  */
 export const allowedTextTags: string[] = [
     'b',
+    'caption',
     'code',
     'del',
     'em',
+    'figcaption',
     'h1',
     'h2',
     'h3',
@@ -36,6 +38,7 @@ export const allowedTextTags: string[] = [
     'h6',
     'ins',
     'label',
+    'legend',
     'mark',
     'p',
     'pre',
