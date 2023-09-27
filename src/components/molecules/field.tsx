@@ -30,11 +30,11 @@ const Field: React.FC<Props> = ({
 	value,
 }) => {
 	const states_outline = `
-		px-xs py-2xs outline outline-2
-		hover:outline-accent-400
-		outline-neutral-400
-		active:outline-accent-600
-		focus-within:outline-accent-500
+		px-xs py-2xs border-solid border-2
+		hover:border-accent-400
+		border-neutral-400
+		active:border-accent-600
+		focus-within:border-accent-500
 	`;
 
 	return (

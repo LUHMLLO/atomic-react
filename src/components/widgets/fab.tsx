@@ -59,7 +59,7 @@ const Fab: React.FC<Props> = ({
 		<button
 			type={type}
 			className={`
-				inline-flex items-center gap-5xs p-5xs max-w-full font-bold text-5xl  
+				inline-flex items-center gap-5xs p-5xs max-w-full font-bold  
 				
 				${!borderless && !filled && states_outline}
 				${borderless && !filled && states_hollow}
@@ -69,7 +69,7 @@ const Fab: React.FC<Props> = ({
 				${className}
 			`}
 			onClick={onClick}>
-			{icon && <Icon name={icon} filled={filled} />}
+			{icon && <Icon name={icon} filled={filled} className='text-xl' />}
 		</button>
 	);
 };

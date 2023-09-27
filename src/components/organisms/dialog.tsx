@@ -39,7 +39,7 @@ const Dialog: React.FC<DialogProps> = ({
 	return (
 		<dialog
 			ref={dialogComponent}
-			className='open:flex flex-col flex-grow flex-shrink gap-xs p-xs bg-neutral-900 text-neutral-400 rounded-5xs min-w-fit w-max max-w-full max-h-full overflow-hidden'
+			className='open:flex flex-col flex-grow flex-shrink gap-xs p-xs bg-neutral-900 text-neutral-400 rounded-5xs w-full max-w-[96%] max-h-[96%] overflow-hidden'
 			open={open}>
 			<header className='flex items-center justify- gap-xs z-10'>
 				{isModal && (
