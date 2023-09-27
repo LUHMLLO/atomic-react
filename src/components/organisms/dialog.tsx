@@ -39,7 +39,7 @@ const Dialog: React.FC<DialogProps> = ({
 	return (
 		<dialog
 			ref={dialogComponent}
-			className='open:flex flex-col flex-grow flex-shrink gap-xs p-xs bg-zinc-900 text-zinc-400 rounded-5xs min-w-fit w-max max-w-full max-h-full overflow-hidden'
+			className='open:flex flex-col flex-grow flex-shrink gap-xs p-xs bg-neutral-900 text-neutral-400 rounded-5xs min-w-fit w-max max-w-full max-h-full overflow-hidden'
 			open={open}>
 			<header className='flex items-center justify- gap-xs z-10'>
 				{isModal && (
@@ -49,11 +49,7 @@ const Dialog: React.FC<DialogProps> = ({
 				<Text tag='h6' text={text} className='flex-grow' />
 
 				{fullscreen && !isModal && (
-					<Button
-						className='p-5xs'
-						leading_icon='fullscreen'
-						onClick={reOpenAsModal}
-					/>
+					<Button leading_icon='fullscreen' onClick={reOpenAsModal} />
 				)}
 			</header>
 			<section className='flex flex-col gap-xs flex-grow flex-shrink max-h-full w-full z-0 overflow-y-auto'>

@@ -66,7 +66,7 @@ export default function Route() {
 				onSubmit={handleLogin}
 				className='flex flex-col items-center justify-center flex-shrink-0 gap-5xl w-[34vw] h-full'>
 				<nav className='flex items-center justify-between gap-5xs mx-auto w-[32rem]'>
-					<Figure src='/favicon.svg' className='w-[4rem]' />
+					<Figure src='/vite.svg' className='w-[4rem]' />
 					<ThemeToggle />
 				</nav>
 				<div className='flex flex-col gap-nm mx-auto w-[32rem]'>
@@ -102,7 +102,7 @@ export default function Route() {
 					</div>
 				</div>
 				<footer className='flex items-center justify-center gap-4xs mx-auto w-[32rem]'>
-					<Button filled rounded text='Confirm' type='submit' /> Or{' '}
+					<Button filled rounded active text='Confirm' type='submit' /> Or{' '}
 					<Link text='Create' alwaysHighlighted /> an account.
 				</footer>
 			</form>

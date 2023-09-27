@@ -13,7 +13,7 @@ import Stepper from '@/components/organisms/stepper';
 import Tabs from '@/components/organisms/tabs';
 
 const DocBox =
-	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden relative';
+	'flex items-center justify-center p-nm aspect-square outline-dashed outline-neutral-800 rounded-md gap-5xs overflow-hidden relative';
 
 export default function Route(): JSX.Element {
 	return (
