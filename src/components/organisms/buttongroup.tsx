@@ -19,18 +19,21 @@ interface Props {
 
 const Buttongroup: React.FC<Props> = ({
 	buttons,
-	className,
-	filled,
-	rounded,
-	borderless,
+	className = '',
+	filled = false,
+	rounded = false,
+	borderless = false,
 }) => {
+	const states_outline = `outline outline-2 outline-neutral-900`;
+
 	return (
 		<ul
-			className={`inline-flex items-stretch justify-center flex-shrink rounded-5xs gap-8xs overflow-hidden whitespace-nowrap w-max gap-1 ${
-				!filled &&
-				!borderless &&
-				'outline outline-2 outline-zinc-800 bg-zinc-800'
-			} ${className}`}>
+			className={`
+				inline-flex items-stretch justify-center flex-shrink overflow-hidden whitespace-nowrap w-max gap-1 bg-neutral-900
+				${!filled && !borderless && states_outline} 
+				${rounded && 'rounded-5xs'}
+				${className}
+			`}>
 			{buttons.map((btn, index) => (
 				<Button
 					key={index}
@@ -40,9 +43,7 @@ const Buttongroup: React.FC<Props> = ({
 					trailing_icon={btn.trailing_icon}
 					trailing_icon_fill={btn.trailing_icon_fill}
 					filled={filled}
-					rounded={rounded}
-					borderless={borderless}
-					className={`${!filled && !borderless && 'bg-zinc-900'}`}
+					borderless
 				/>
 			))}
 		</ul>

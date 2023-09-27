@@ -21,12 +21,14 @@ const Collapsible: React.FC<Props> = ({
 }) => {
 	return (
 		<details
-			className={`w-full rounded-5xs overflow-hidden ${
-				minimal ? '' : 'bg-zinc-900'
-			} ${className}`}>
+			className={`
+				flex flex-col gap-1 w-full overflow-hidden rounded-5xs
+				${minimal ? '' : 'bg-neutral-900'} 
+				${className}
+			`}>
 			<summary
 				className={`flex items-center gap-5xs w-full cursor-pointer ${
-					minimal ? '' : 'px-nm py-sm'
+					minimal ? '' : 'px-nm py-sm bg-neutral-800'
 				}`}>
 				{leading_icon && (
 					<Icon name={leading_icon} filled={leading_icon_filled} />
@@ -34,7 +36,7 @@ const Collapsible: React.FC<Props> = ({
 				<Text tag='span' text={text} className='w-full' />
 				<Icon name='expand_more' />
 			</summary>
-			<ul className={`flex flex-col gap-5xs p-5xs w-full ${minimal ? '':'bg-zinc-800'}`}>{children}</ul>
+			<ul className='flex flex-col gap-5xs p-5xs w-full'>{children}</ul>
 		</details>
 	);
 };

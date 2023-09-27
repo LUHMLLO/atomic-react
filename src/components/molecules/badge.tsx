@@ -12,7 +12,7 @@ interface Props {
 const Badge: React.FC<Props> = (props) => {
 	return (
 		<span
-			className={`inline-flex items-center rounded-5xs p-5xs w-max bg-zinc-900 text-zinc-400 ${props.className}`}>
+			className={`inline-flex items-center rounded-5xs p-5xs w-max bg-neutral-900 ${props.className}`}>
 			{props.variant === 'icon' && (
 				<Icon name={props.text} filled={props.filled} />
 			)}

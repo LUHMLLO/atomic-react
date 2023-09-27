@@ -39,7 +39,7 @@ const Button: React.FC<Props> = ({
 
 	const states_hollow = `
 		${active ? 'hover:text-accent-400' : 'hover:text-neutral-300'} 
-		${active ? 'text-accent-500' : 'text-neutral-400'} 
+		${active ? 'text-accent-500' : 'bg-neutral-950 text-neutral-400'} 
 		${active ? 'active:text-accent-600' : 'active:text-neutral-500'} 
 	`;
 

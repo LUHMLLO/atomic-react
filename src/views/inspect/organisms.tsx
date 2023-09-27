@@ -51,12 +51,13 @@ export default function Route(): JSX.Element {
 			<div className={`flex-col ${DocBox}`}>
 				<Buttongroup
 					filled
-					borderless
+					rounded
 					buttons={[{ text: 'Days' }, { text: 'Months' }, { text: 'Years' }]}
 				/>
 
 				<Buttongroup
 					filled
+					rounded
 					buttons={[
 						{ text: 'Download for free', leading_icon: 'download' },
 						{ text: '31k' },
@@ -65,6 +66,7 @@ export default function Route(): JSX.Element {
 
 				<Buttongroup
 					filled
+					rounded
 					buttons={[
 						{ leading_icon: 'arrow_back' },
 						{ trailing_icon: 'arrow_forward' },
@@ -73,11 +75,13 @@ export default function Route(): JSX.Element {
 
 				<Buttongroup
 					filled
+					rounded
 					buttons={[{ text: 'Live preview' }, { trailing_icon: 'open_in_new' }]}
 				/>
 
 				<Buttongroup
 					filled
+					rounded
 					buttons={[
 						{ leading_icon: 'align_justify_flex_start' },
 						{ leading_icon: 'align_justify_flex_end' },
@@ -90,10 +94,12 @@ export default function Route(): JSX.Element {
 
 			<div className={`flex-col ${DocBox}`}>
 				<Buttongroup
+					rounded
 					buttons={[{ text: 'Days' }, { text: 'Months' }, { text: 'Years' }]}
 				/>
 
 				<Buttongroup
+					rounded
 					buttons={[
 						{ text: 'Download for free', leading_icon: 'download' },
 						{ text: '31k' },
@@ -101,6 +107,7 @@ export default function Route(): JSX.Element {
 				/>
 
 				<Buttongroup
+					rounded
 					buttons={[
 						{ leading_icon: 'arrow_back' },
 						{ trailing_icon: 'arrow_forward' },
@@ -108,10 +115,12 @@ export default function Route(): JSX.Element {
 				/>
 
 				<Buttongroup
+					rounded
 					buttons={[{ text: 'Live preview' }, { trailing_icon: 'open_in_new' }]}
 				/>
 
 				<Buttongroup
+					rounded
 					buttons={[
 						{ leading_icon: 'align_justify_flex_start' },
 						{ leading_icon: 'align_justify_flex_end' },
