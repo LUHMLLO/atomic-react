@@ -9,9 +9,10 @@ import ReactDOM from 'react-dom/client';
 import Index from './views/app/index';
 import Dashboard from './views/app/dashboard';
 import Login from './views/auth/login';
-import Atoms from './views/inspect/atoms';
-import Molecules from './views/inspect/molecules';
-import Organisms from './views/inspect/organisms';
+import Inspect_Atoms from './views/inspect/atoms';
+import Inspect_Molecules from './views/inspect/molecules';
+import Inspect_Organisms from './views/inspect/organisms';
+import Inspect_Widgets from './views/inspect/widgets';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 
@@ -29,9 +30,10 @@ function renderApp(rootElement: HTMLElement | null) {
 						<Route path='/login' element={<Login />} />
 						<Route path='/' element={<Index />} />
 						<Route path='/dashboard' element={<Dashboard />} />
-						<Route path='/inspect/atoms' element={<Atoms />} />
-						<Route path='/inspect/molecules' element={<Molecules />} />
-						<Route path='/inspect/organisms' element={<Organisms />} />
+						<Route path='/inspect/atoms' element={<Inspect_Atoms />} />
+						<Route path='/inspect/molecules' element={<Inspect_Molecules />} />
+						<Route path='/inspect/organisms' element={<Inspect_Organisms />} />
+						<Route path='/inspect/widgets' element={<Inspect_Widgets />} />
 					</Routes>
 				</Suspense>
 			</Router>

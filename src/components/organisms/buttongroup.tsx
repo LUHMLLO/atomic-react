@@ -29,7 +29,7 @@ const Buttongroup: React.FC<Props> = ({
 	return (
 		<ul
 			className={`
-				inline-flex items-stretch justify-center flex-shrink overflow-hidden whitespace-nowrap w-max gap-1 bg-neutral-900
+				inline-flex items-stretch justify-center flex-shrink overflow-hidden whitespace-nowrap w-max gap-1
 				${!filled && !borderless && states_outline} 
 				${rounded && 'rounded-5xs'}
 				${className}
@@ -42,8 +42,7 @@ const Buttongroup: React.FC<Props> = ({
 					leading_icon_fill={btn.leading_icon_fill}
 					trailing_icon={btn.trailing_icon}
 					trailing_icon_fill={btn.trailing_icon_fill}
-					filled={filled}
-					borderless
+					filled={filled}					
 				/>
 			))}
 		</ul>

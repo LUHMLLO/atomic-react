@@ -12,6 +12,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.25.4",
     "@nanostores/react": "^0.7.1",
+    "chart.js": "^4.4.0",
     "material-symbols": "^0.12.0",
     "nanostores": "^0.9.3",
     "react": "^18.2.0",

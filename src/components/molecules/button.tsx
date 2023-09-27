@@ -39,7 +39,7 @@ const Button: React.FC<Props> = ({
 
 	const states_hollow = `
 		${active ? 'hover:text-accent-400' : 'hover:text-neutral-300'} 
-		${active ? 'text-accent-500' : 'bg-neutral-950 text-neutral-400'} 
+		${active ? 'text-accent-500' : 'bg-transparent text-neutral-400'} 
 		${active ? 'active:text-accent-600' : 'active:text-neutral-500'} 
 	`;
 
@@ -47,17 +47,17 @@ const Button: React.FC<Props> = ({
 		${
 			active
 				? 'hover:outline-accent-400 hover:text-accent-400'
-				: 'hover:outline-neutral-300 hover:text-neutral-300'
+				: 'hover:outline-inherit hover:text-neutral-300'
 		} 
 		${
 			active
 				? 'outline-accent-500 text-accent-500'
-				: 'outline-neutral-400 text-neutral-400'
+				: 'outline-inherit text-neutral-400'
 		} 
 		${
 			active
 				? 'active:outline-accent-600 active:text-accent-600'
-				: 'active:outline-neutral-500 active:text-neutral-500'
+				: 'active:outline-inherit active:text-neutral-500'
 		} 
 	`;
 

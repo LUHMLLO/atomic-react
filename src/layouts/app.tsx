@@ -9,18 +9,21 @@ import Fab from '@/components/widgets/fab';
 function Layout({ children }: { children?: ReactNode }): JSX.Element {
 	return (
 		<div className='flex items-center w-screen h-screen overflow-hidden'>
-			<aside className='flex flex-col items-center gap-5xl p-2xl h-screen overflow-y-auto bg-neutral-900'>
+			<aside className='flex flex-col items-center gap-5xl p-2xl flex-shrink-0 w-max h-screen overflow-y-auto bg-neutral-900'>
 				<nav className='flex flex-col flex-grow items-center justify-end'>
 					<Figure src='/favicon.svg' className='w-[2.5rem]' />
 				</nav>
 				<nav className='flex flex-col gap-5xl h-full'>
-					<Icon name='bolt' className='text-3xl' />
-					<Icon name='grid_view' className='text-3xl' />
-					<Icon name='deployed_code' className='text-3xl' />
-					<Icon name='memory' className='text-3xl' />
-					<Icon name='inbox' className='text-3xl' />
+					<Icon name='bolt' className='text-3xl cursor-pointer hover:text-accent-500' />
+					<Icon name='grid_view' className='text-3xl cursor-pointer hover:text-accent-500' />
+					<Icon name='deployed_code' className='text-3xl cursor-pointer hover:text-accent-500' />
+					<Icon name='memory' className='text-3xl cursor-pointer hover:text-accent-500' />
+					<Icon name='inbox' className='text-3xl cursor-pointer hover:text-accent-500' />
 				</nav>
-				<nav className='flex flex-col flex-grow items-center justify-end'>
+				<nav className='flex flex-col gap-5xl flex-grow items-center justify-end'>
+					<Icon name='dock_to_right' className='text-3xl cursor-pointer hover:text-accent-500' />
+					<Icon name='search' className='text-3xl cursor-pointer hover:text-accent-500' />
+					<Icon name='settings' className='text-3xl cursor-pointer hover:text-accent-500' />
 					<Figure
 						src='https://vuero.cssninja.io/images/avatars/svg/vuero-1.svg'
 						className='w-[2.5rem]'
