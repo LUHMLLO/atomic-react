@@ -12,17 +12,19 @@ interface Tab {
 }
 
 interface TabsProps {
-	variant?: string;
+	rounded?: boolean;
 	tabs: Tab[];
 	className?: string;
 }
 
-const Tabs: React.FC<TabsProps> = ({ variant, tabs, className }) => {
+const Tabs: React.FC<TabsProps> = ({ rounded = false, tabs, className }) => {
 	return (
 		<ul
-			className={`inline-flex items-stretch overflow-x-auto overflow-y-hidden whitespace-nowrap max-w-full ${
-				variant === 'rounded' ? 'rounded-5xs' : ''
-			} ${className}`}>
+			className={`
+				inline-flex items-stretch overflow-x-auto overflow-y-hidden whitespace-nowrap max-w-full 
+				${rounded && 'rounded-5xs'} 
+				${className}
+			`}>
 			{tabs.map((tab, index) => (
 				<Button
 					key={index}
@@ -32,10 +34,9 @@ const Tabs: React.FC<TabsProps> = ({ variant, tabs, className }) => {
 					trailing_icon={tab.trailing_icon}
 					trailing_icon_fill={tab.trailing_icon_fill}
 					borderless
-					rounded
-					className={`${variant === 'rounded' ? 'rounded-5xs' : ''} ${
-						tab.active ? 'bg-accent-600 text-accent-950' : ''
-					}`}
+					rounded={rounded}
+					active={tab.active}
+					filled={tab.active}
 				/>
 			))}
 		</ul>

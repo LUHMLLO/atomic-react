@@ -310,7 +310,7 @@ export default function Route(): JSX.Element {
 
 			<div className={`flex-col ${DocBox}`}>
 				<Tabs
-					variant='rounded'
+					rounded
 					tabs={[
 						{ leading_icon: 'info', text: 'General information', active: true },
 						{ leading_icon: 'style', text: 'Customization' },
