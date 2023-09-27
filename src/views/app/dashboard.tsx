@@ -2,6 +2,7 @@ import Layout from '@/layouts/app';
 import Figure from '@/components/atoms/figure';
 import Text from '@/components/atoms/text';
 import Button from '@/components/molecules/button';
+import Chart from '@/components/widgets/chart';
 
 export default function Route() {
 	return (
@@ -28,30 +29,51 @@ export default function Route() {
 			</header>
 			<section className='flex flex-col gap-2xs'>
 				<ul className='grid grid-cols-4 gap-2xs'>
-					{Array.from({ length: 4 }).map((_, index) => (
+					{[
+						{
+							icon: '',
+							title: 'Total Sales',
+							amount: '$641.1K'
+						},
+						{
+							icon: '',
+							title: 'Total Income',
+							amount: '$389.9K'
+						},
+						{
+							icon: '',
+							title: 'New Order',
+							amount: '371'
+						},
+						{
+							icon: '',
+							title: 'Abandonned',
+							amount: '29'
+						},
+					].map((_, index) => (
 						<li className='aspect-square bg-neutral-800 rounded-5xs p-nm'>
 							{index}
 						</li>
 					))}
 				</ul>
 				<ul className='grid grid-cols-2 gap-2xs'>
-					{Array.from({ length: 2 }).map((_, index) => (
+					{Array.from({ length: 2 }).map(() => (
 						<li className='aspect-square bg-neutral-800 rounded-5xs p-nm'>
-							{index}
+							<Chart chartType='line'/>
 						</li>
 					))}
 				</ul>
 				<ul className='grid grid-cols-2 gap-2xs'>
-					{Array.from({ length: 2 }).map((_, index) => (
+					{Array.from({ length: 2 }).map(() => (
 						<li className='aspect-video bg-neutral-800 rounded-5xs p-nm'>
-							{index}
+							<Chart chartType='line'/>
 						</li>
 					))}
 				</ul>
 				<ul className='grid grid-cols-2 gap-2xs'>
-					{Array.from({ length: 2 }).map((_, index) => (
+					{Array.from({ length: 2 }).map(() => (
 						<li className='aspect-video bg-neutral-800 rounded-5xs p-nm'>
-							{index}
+							<Chart chartType='line'/>
 						</li>
 					))}
 				</ul>

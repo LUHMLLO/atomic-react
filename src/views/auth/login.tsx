@@ -66,7 +66,7 @@ export default function Route() {
 				onSubmit={handleLogin}
 				className='flex flex-col items-center justify-center flex-shrink-0 gap-5xl w-[34vw] h-full'>
 				<nav className='flex items-center justify-between gap-5xs mx-auto w-[32rem]'>
-					<Figure src='/vite.svg' className='w-[4rem]' />
+					<Figure src='/favicon.svg' className='w-[4rem]' />
 					<ThemeToggle />
 				</nav>
 				<div className='flex flex-col gap-nm mx-auto w-[32rem]'>

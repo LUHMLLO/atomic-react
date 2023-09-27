@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import Chart, { ChartConfiguration } from 'chart.js/auto';
+import Chart, { ChartConfiguration, ChartTypeRegistry } from 'chart.js/auto';
 
-const ChartComponent: React.FC = () => {
+interface Props {
+	chartType: string;
+}
+
+const ChartComponent: React.FC<Props> = ({ chartType }) => {
 	const canvasRef = useRef<HTMLCanvasElement | null>(null);
 	const chartRef = useRef<Chart | null>(null);
 
@@ -11,7 +15,7 @@ const ChartComponent: React.FC = () => {
 			const ctx = canvas.getContext('2d');
 			if (ctx) {
 				const config: ChartConfiguration = {
-					type: 'line',
+					type: chartType as keyof ChartTypeRegistry,
 					data: {
 						labels: [
 							'Feb',
@@ -62,10 +66,10 @@ const ChartComponent: React.FC = () => {
 				chartRef.current.destroy();
 			}
 		};
-	}, []);
+	}, [chartType]);
 
 	return (
-		<div className='place-center text-center corners bord bord-second aspect-10:3 no-overflow'>
+		<div className='w-full h-full overflow-hidden'>
 			<canvas ref={canvasRef} className='p-fixed inset w-100 h-100 bg-first' />
 		</div>
 	);

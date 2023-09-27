@@ -158,7 +158,7 @@ export default function Route(): JSX.Element {
 
 			<div className={`flex-col ${DocBox}`}>
 				<Dialog text='Normal Dialog with Figure' open>
-					<Figure src='/vite.svg' />
+					<Figure src='/favicon.svg' />
 				</Dialog>
 			</div>
 

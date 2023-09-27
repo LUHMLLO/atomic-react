@@ -9,7 +9,9 @@ import Fab from '@/components/widgets/fab';
 function Layout({ children }: { children?: ReactNode }): JSX.Element {
 	return (
 		<div className='flex items-center w-screen h-screen overflow-hidden'>
-			<aside className='flex flex-col items-center gap-5xl p-2xl flex-shrink-0 w-max h-screen overflow-y-auto bg-neutral-900'>
+			<aside className='flex flex-shrink-0 w-max h-full'>
+
+			<aside className='flex flex-col items-center gap-5xl p-2xl flex-shrink-0 w-max h-full overflow-y-auto bg-neutral-900'>
 				<nav className='flex flex-col flex-grow items-center justify-end'>
 					<Figure src='/favicon.svg' className='w-[2.5rem]' />
 				</nav>
@@ -29,6 +31,7 @@ function Layout({ children }: { children?: ReactNode }): JSX.Element {
 						className='w-[2.5rem]'
 					/>
 				</nav>
+			</aside>
 			</aside>
 			<main className='flex flex-col w-full h-screen overflow-y-auto'>
 				<div className='flex flex-col w-full gap-2xl p-2xl max-w-[80rem] mx-auto'>

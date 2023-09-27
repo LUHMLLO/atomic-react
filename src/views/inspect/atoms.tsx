@@ -20,7 +20,7 @@ export default function Route(): JSX.Element {
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
-				<Figure src='/vite.svg' />
+				<Figure src='/favicon.svg' />
 			</div>
 
 			<div className={`flex-row ${DocBox}`}>

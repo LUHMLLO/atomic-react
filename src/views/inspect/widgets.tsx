@@ -9,9 +9,20 @@ const DocBox =
 export default function Route(): JSX.Element {
 	return (
 		<PageLayout>
-			<div className={`flex-col ${DocBox}`}>
-				<Chart />
-			</div>
+			{[
+				'bar',
+				'bubble',
+				'doughnut',
+				'line',
+				'pie',
+				'polarArea',
+				'radar',
+				'scatter',
+			].map((type, index) => (
+				<div className={`flex-col ${DocBox}`} key={index}>
+					<Chart chartType={type} />
+				</div>
+			))}
 
 			<div className={`flex-col ${DocBox}`}>
 				<Fab filled rounded borderless icon='add' />
