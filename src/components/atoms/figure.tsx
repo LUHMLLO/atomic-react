@@ -6,15 +6,11 @@ interface Props {
 	src?: string;
 }
 
-const Figure: React.FC<Props> = ({
-	alt = '',
-	className = '',
-	src = '',
-}) => {
+const Figure: React.FC<Props> = ({ alt = '', className = '', src = '' }) => {
 	return (
 		<figure
 			className={`inline-flex items-center flex-shrink-0 overflow-hidden rounded-5xs ${className}`}>
-			<img src={src} alt={alt} />
+			<img src={src} alt={alt} className='inset-0 object-cover w-full h-full' />
 		</figure>
 	);
 };

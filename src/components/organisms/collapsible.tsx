@@ -5,7 +5,7 @@ import Text from '@/components/atoms/text';
 interface Props {
 	text: string;
 	className?: string;
-	flat?: boolean;
+	minimal?: boolean;
 	leading_icon?: string;
 	leading_icon_filled?: boolean;
 	children?: ReactNode;
@@ -14,7 +14,7 @@ interface Props {
 const Collapsible: React.FC<Props> = ({
 	text,
 	className,
-	flat,
+	minimal,
 	leading_icon,
 	leading_icon_filled,
 	children,
@@ -22,11 +22,11 @@ const Collapsible: React.FC<Props> = ({
 	return (
 		<details
 			className={`w-full rounded-5xs overflow-hidden ${
-				flat ? '' : 'bg-neutral-900'
+				minimal ? '' : 'bg-zinc-900'
 			} ${className}`}>
 			<summary
 				className={`flex items-center gap-5xs w-full cursor-pointer ${
-					flat ? '' : 'px-nm py-sm bg-neutral-800'
+					minimal ? '' : 'px-nm py-sm'
 				}`}>
 				{leading_icon && (
 					<Icon name={leading_icon} filled={leading_icon_filled} />
@@ -34,7 +34,7 @@ const Collapsible: React.FC<Props> = ({
 				<Text tag='span' text={text} className='w-full' />
 				<Icon name='expand_more' />
 			</summary>
-			<ul className='flex flex-col gap-5xs p-5xs w-full'>{children}</ul>
+			<ul className={`flex flex-col gap-5xs p-5xs w-full ${minimal ? '':'bg-zinc-800'}`}>{children}</ul>
 		</details>
 	);
 };

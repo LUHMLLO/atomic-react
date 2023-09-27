@@ -16,12 +16,12 @@ const Radio: React.FC<Props> = ({
 
 	return (
 		<input
+			x-variant='radio'
 			type='radio'
 			className={`${className} ${Styles}`}
 			name={groupName}
 			checked={isChecked}
 			onChange={() => {
-				console.log('ola');
 				setIsChecked(!isChecked);
 			}}
 		/>

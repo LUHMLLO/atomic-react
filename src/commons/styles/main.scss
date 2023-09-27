@@ -9,6 +9,7 @@
 **/
 
 @layer x-scss {
+
 	*,
 	*:before,
 	*:after {
@@ -25,7 +26,7 @@
 
 	html,
 	body {
-		line-height: 150%;
+		line-height: 1.5;
 	}
 }
 
@@ -126,9 +127,17 @@
 	var {
 		font-size: 0.8771929825rem;
 	}
+
 	code,
 	kbd,
 	pre {
 		font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+	}
+}
+
+@layer x-scss{
+	*{
+		transition-duration: 360ms;
+		transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 	}
 }

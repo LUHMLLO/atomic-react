@@ -6,21 +6,22 @@
 **/
 
 @layer x-icons {
+
 	/* fallback */
 	@font-face {
 		font-display: block;
 		font-family: 'Material Symbols Rounded';
 		font-style: normal;
 		font-weight: 100 200 300 400 500 600 700 800 900;
-		src: url('../../../node_modules/material-symbols/material-symbols-rounded.woff2')
-			format('woff2');
+		src: url('../../../node_modules/material-symbols/material-symbols-rounded.woff2') format('woff2');
 	}
 
 	.material-symbols-rounded {
+
 		font-family: 'Material Symbols Rounded';
-		font-weight: 400;
+		font-weight: normal;
 		font-style: normal;
-		font-size: 1.2996rem;
+		@apply text-2xl;
 		line-height: 1;
 		letter-spacing: normal;
 		text-transform: none;

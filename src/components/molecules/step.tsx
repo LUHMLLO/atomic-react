@@ -17,7 +17,7 @@ const ListItem: React.FC<Props> = ({ text, hasBar, done, className }) => {
 			<Icon
 				name='check_circle'
 				filled={done}
-				className={done ? 'text-accent-500' : 'text-accent-900'}
+				className={done ? 'text-emerald-600' : 'text-accent-900'}
 			/>
 
 			<Text tag='label' text={text} className='whitespace-nowrap' />
@@ -25,7 +25,7 @@ const ListItem: React.FC<Props> = ({ text, hasBar, done, className }) => {
 			{hasBar && (
 				<Spacer
 					direction='horizontal'
-					className={done ? 'bg-accent-500' : 'bg-accent-900'}
+					className={done ? 'bg-emerald-600' : 'bg-accent-900'}
 				/>
 			)}
 		</li>

@@ -2,30 +2,41 @@ import '@/commons/styles/icons.scss';
 import '@/commons/styles/tailwind.scss';
 import '@/commons/styles/main.scss';
 
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Index from './views/app/index';
+import Dashboard from './views/app/dashboard';
+import Login from './views/auth/login';
+import Atoms from './views/inspect/atoms';
+import Molecules from './views/inspect/molecules';
+import Organisms from './views/inspect/organisms';
 
-import Login from '@/views/auth/login';
+const rootElement: HTMLElement | null = document.getElementById('root');
 
-import Dashboard from '@/views/app/dashboard';
+function renderApp(rootElement: HTMLElement | null) {
+	if (!rootElement) {
+		console.error("Root element 'root' not found in the HTML.");
+		return;
+	}
 
-import Atoms from '@/views/lab/atoms';
-import Molecules from '@/views/lab/molecules';
-import Organisms from '@/views/lab/organisms';
+	ReactDOM.createRoot(rootElement).render(
+		<React.StrictMode>
+			<Router>
+				<Suspense fallback={<div>Loading...</div>}>
+					<Routes>
+						<Route path='/login' element={<Login />} />
+						<Route path='/' element={<Index />} />
+						<Route path='/dashboard' element={<Dashboard />} />
+						<Route path='/inspect/atoms' element={<Atoms />} />
+						<Route path='/inspect/molecules' element={<Molecules />} />
+						<Route path='/inspect/organisms' element={<Organisms />} />
+					</Routes>
+				</Suspense>
+			</Router>
+		</React.StrictMode>
+	);
+}
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-	<React.StrictMode>
-		<Router>
-			<Suspense fallback={<div>Loading...</div>}>
-				<Routes>
-					<Route path='/auth/login' element={<Login />} />
-					<Route path='/app/dashboard' element={<Dashboard />} />
-					<Route path='/lab/atoms' element={<Atoms />} />
-					<Route path='/lab/molecules' element={<Molecules />} />
-					<Route path='/lab/organisms' element={<Organisms />} />
-				</Routes>
-			</Suspense>
-		</Router>
-	</React.StrictMode>
-);
+renderApp(rootElement);

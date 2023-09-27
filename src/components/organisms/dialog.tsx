@@ -12,34 +12,34 @@ interface DialogProps {
 }
 
 const Dialog: React.FC<DialogProps> = ({
-	text,
-	open,
-	fullscreen,
+	text = '',
+	open = false,
+	fullscreen = false,
 	children,
 }) => {
 	const dialogComponent = useRef<HTMLDialogElement | null>(null);
 	const [isModal, setIsModal] = useState(false);
 
-	const reOpen = (): void => {
+	function reOpen(): void {
 		if (dialogComponent.current) {
 			dialogComponent.current.close();
 			dialogComponent.current.show();
 		}
 		setIsModal(!isModal);
-	};
+	}
 
-	const reOpenAsModal = (): void => {
+	function reOpenAsModal(): void {
 		if (dialogComponent.current) {
 			dialogComponent.current.close();
 			dialogComponent.current.showModal();
 		}
 		setIsModal(!isModal);
-	};
+	}
 
 	return (
 		<dialog
 			ref={dialogComponent}
-			className='flex flex-col flex-grow flex-shrink gap-xs p-xs bg-neutral-900 text-neutral-400 rounded-5xs min-w-fit w-max max-w-full max-h-full overflow-hidden'
+			className='open:flex flex-col flex-grow flex-shrink gap-xs p-xs bg-zinc-900 text-zinc-400 rounded-5xs min-w-fit w-max max-w-full max-h-full overflow-hidden'
 			open={open}>
 			<header className='flex items-center justify- gap-xs z-10'>
 				{isModal && (

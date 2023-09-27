@@ -13,13 +13,23 @@ interface Props {
 	}>;
 	className?: string;
 	filled?: boolean;
+	rounded?: boolean;
+	borderless?: boolean;
 }
 
-const Buttongroup: React.FC<Props> = ({ buttons, className, filled }) => {
+const Buttongroup: React.FC<Props> = ({
+	buttons,
+	className,
+	filled,
+	rounded,
+	borderless,
+}) => {
 	return (
 		<ul
-			className={`inline-flex items-stretch justify-center flex-shrink rounded-5xs gap-8xs overflow-hidden whitespace-nowrap w-max ${
-				filled ? 'bg-neutral-950' : 'border-2 border-neutral-900 bg-neutral-900'
+			className={`inline-flex items-stretch justify-center flex-shrink rounded-5xs gap-8xs overflow-hidden whitespace-nowrap w-max gap-1 ${
+				!filled &&
+				!borderless &&
+				'outline outline-2 outline-zinc-800 bg-zinc-800'
 			} ${className}`}>
 			{buttons.map((btn, index) => (
 				<Button
@@ -29,10 +39,10 @@ const Buttongroup: React.FC<Props> = ({ buttons, className, filled }) => {
 					leading_icon_fill={btn.leading_icon_fill}
 					trailing_icon={btn.trailing_icon}
 					trailing_icon_fill={btn.trailing_icon_fill}
-					filled
-					flat
-					borderless
-					className={filled ? '' : 'bg-neutral-950'}
+					filled={filled}
+					rounded={rounded}
+					borderless={borderless}
+					className={`${!filled && !borderless && 'bg-zinc-900'}`}
 				/>
 			))}
 		</ul>

@@ -21,7 +21,7 @@ const Tabs: React.FC<TabsProps> = ({ variant, tabs, className }) => {
 	return (
 		<ul
 			className={`inline-flex items-stretch overflow-x-auto overflow-y-hidden whitespace-nowrap max-w-full ${
-				variant === 'rounded' ? 'rounded-5xl' : ''
+				variant === 'rounded' ? 'rounded-5xs' : ''
 			} ${className}`}>
 			{tabs.map((tab, index) => (
 				<Button
@@ -32,9 +32,9 @@ const Tabs: React.FC<TabsProps> = ({ variant, tabs, className }) => {
 					trailing_icon={tab.trailing_icon}
 					trailing_icon_fill={tab.trailing_icon_fill}
 					borderless
-					flat
-					className={`${variant === 'rounded' ? 'rounded-5xl' : ''} ${
-						tab.active ? 'bg-accent-500 text-accent-900' : ''
+					rounded
+					className={`${variant === 'rounded' ? 'rounded-5xs' : ''} ${
+						tab.active ? 'bg-emerald-600 text-accent-950' : ''
 					}`}
 				/>
 			))}

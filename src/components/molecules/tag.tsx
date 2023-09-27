@@ -21,9 +21,9 @@ const Tag: React.FC<Props> = ({
 }) => {
 	return (
 		<span
-			className={`inline-flex items-center rounded-5xs px-xs py-5xs w-max bg-neutral-900 text-neutral-400 ${className}`}>
+			className={`inline-flex items-center rounded-5xs px-xs py-5xs w-max bg-zinc-900 text-zinc-400 ${className}`}>
 			{leading_icon && <Icon name={leading_icon} filled={leading_icon_fill} />}
-			<Text tag='span' text={text} scale='xs' />
+			<Text tag='span' text={text} />
 			{trailing_icon && (
 				<Icon name={trailing_icon} filled={trailing_icon_fill} />
 			)}

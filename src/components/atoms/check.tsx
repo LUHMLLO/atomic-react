@@ -11,6 +11,7 @@ const Check: React.FC<Props> = ({ checked = false, className = '' }) => {
 
 	return (
 		<input
+			x-variant='check'
 			type='checkbox'
 			className={`${className} ${Styles}`}
 			checked={isChecked}

@@ -12,25 +12,25 @@ export default {
     spacing: Scales,
 
     fontFamily: {
-      'sans': "'DM Sans', sans-serif",
-      'display': "'DM Sans', sans-serif",
-      'body': "'DM Sans', sans-serif",
+      'sans': "'Roboto', sans-serif",
+      'display': "'Roboto', sans-serif",
+      'body': "'Roboto', sans-serif",
     },
 
     extend: {
       colors: {
         'accent': {
-          50: '',
-          100: '#cefecd',
-          200: '#6dfd68',
-          300: '#9efd9b',
-          400: '#3dfc36',
-          500: '#0cfb04',
-          600: '#0ac903',
-          700: '#079702',
-          800: '#056402',
-          900: '#023201',
-          950: '',
+          50: '#ecfdf8',
+          100: '#d1faee',
+          200: '#a7f3de',
+          300: '#6ee7c5',
+          400: '#34d3a6',
+          500: '#10b98a',
+          600: '#05966d',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3a',
+          950: '#022c20',
         },
       },
     }

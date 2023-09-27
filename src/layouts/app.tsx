@@ -1,7 +1,12 @@
-export default function Layout() {
+import { ReactNode } from 'react';
+
+function Layout({ children }: { children?: ReactNode }): JSX.Element {
 	return (
 		<main>
-			<slot />
+			{/* The content inside the layout */}
+			{children}
 		</main>
 	);
 }
+
+export default Layout;

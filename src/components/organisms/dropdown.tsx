@@ -1,5 +1,4 @@
-import React, { ReactNode, useState, useEffect, useRef } from 'react';
-import { useFloating, flip, offset, shift } from '@floating-ui/react';
+import React, { ReactNode } from 'react';
 import Icon from '@/components/atoms/icon';
 import Text from '@/components/atoms/text';
 
@@ -20,48 +19,31 @@ const Dropdown: React.FC<Props> = ({
 	leading_icon,
 	leading_icon_filled,
 	text,
+	children,
 }) => {
-	const reference = useRef<HTMLDetailsElement | null>(null);
-	const floating = useRef<HTMLUListElement | null>(null);
+	// const reference = useRef<HTMLDetailsElement | null>(null);
+	// const floating = useRef<HTMLUListElement | null>(null);
+	// const [floatingStyles, setFloatingStyles] = useState<React.CSSProperties>({});
 
-	const [floatingStyles, setFloatingStyles] = useState<React.CSSProperties>({
-		position: 'absolute',
-		visibility: 'hidden',
-	});
-
-	useEffect(() => {
-		if (reference.current && floating.current) {
-			const middleware = [
-				flip({
-					fallbackStrategy: 'bestFit',
-					padding: 6,
-				}),
-				offset(6),
-				shift({
-					mainAxis: true,
-					crossAxis: true,
-				}),
-			];
-
-			const { styles } = useFloating(reference, floating, {
-				placement: 'bottom',
-				middleware,
-				whileElementsMounted: (placement, styles) => {
-					setFloatingStyles(styles);
-				},
-			});
-
-			setFloatingStyles(styles);
-		}
-	}, [filled, flat]);
+	// useEffect(() => {
+	// 	if (reference.current && floating.current) {
+	// 		const referenceRect = reference.current.getBoundingClientRect();
+	// 		const desiredStyles: React.CSSProperties = {
+	// 			position: 'absolute',
+	// 			top: `${referenceRect.bottom}px`,
+	// 			left: `${referenceRect.left}px`,
+	// 		};
+	// 		setFloatingStyles(desiredStyles);
+	// 	}
+	// }, []);
 
 	return (
 		<details
-			className={`relative inline-flex flex-col ${className ? className : ''}`}>
+			// ref={reference}
+			className={`relative inline-flex flex-col gap-5xs ${className}`}>
 			<summary
-				ref={reference}
 				className={`flex items-center gap-5xs min-w-full max-w-max cursor-pointer rounded-5xs ${
-					filled ? 'bg-neutral-900' : ''
+					filled ? 'bg-zinc-900' : ''
 				} ${text && !flat ? 'px-sm py-xs' : ''} ${
 					!text && !flat ? 'p-5xs' : ''
 				}`}>
@@ -72,9 +54,9 @@ const Dropdown: React.FC<Props> = ({
 				<Icon name='expand_more' />
 			</summary>
 			<ul
-				ref={floating}
-				className='flex flex-col gap-5xs p-5xs min-w-full max-w-max bg-neutral-900 rounded-5xs whitespace-nowrap'
-				style={floatingStyles}>
+				// ref={floating}
+				// style={floatingStyles}
+				className={`absolute mt-5xs flex flex-col gap-5xs p-5xs min-w-full max-w-max bg-zinc-900 rounded-5xs whitespace-nowrap`}>
 				{children}
 			</ul>
 		</details>
