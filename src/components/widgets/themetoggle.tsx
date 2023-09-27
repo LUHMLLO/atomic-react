@@ -10,14 +10,12 @@ const ThemeToggle: React.FC<Props> = ({ checked = false }) => {
 
 	return (
 		<span
-			className={`cursor-pointer ${
-				isChecked ? 'text-amber-300' : 'text-slate-400'
-			}`}
+			className={`inline-flex cursor-pointer text-amber-300 p-5xs`}
 			onClick={() => setIsChecked(!isChecked)}>
 			{isChecked ? (
-				<Icon name='light_mode' className='text-3xl' />
+				<Icon name='light_mode' filled />
 			) : (
-				<Icon name='dark_mode' className='text-3xl' />
+				<Icon name='dark_mode' filled />
 			)}
 		</span>
 	);
