@@ -27,7 +27,7 @@ const Link: React.FC<Props> = ({
 		<a
 			href={url ? url : '#'}
 			className={`inline-flex items-center gap-5xs w-max font-medium ${
-				alwaysHighlighted ? 'text-emerald-600 ' : 'text-inherit'
+				alwaysHighlighted ? 'text-accent-600 ' : 'text-inherit'
 			} ${className} hover:text-accent-400 focus:text-accent-600 active:text-accent-700`}>
 			{leading_icon && <Icon name={leading_icon} filled={leading_icon_fill} />}
 			{text && <Text tag='span' text={text} />}

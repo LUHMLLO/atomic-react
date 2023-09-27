@@ -71,7 +71,7 @@ export default function Route() {
 				</nav>
 				<div className='flex flex-col gap-nm mx-auto w-[32rem]'>
 					<div>
-						<Text tag='h1' text='Sign In' className='text-emerald-600' />
+						<Text tag='h1' text='Sign In' className='text-accent-600' />
 						<Text tag='p' text='Welcome back to your account.' />
 					</div>
 					<div className='border-2 border-zinc-700 rounded-5xs overflow-hidden p-nm gap-nm'>

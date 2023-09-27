@@ -29,7 +29,7 @@
     }
 
     &:checked {
-        @apply text-emerald-600;
+        @apply text-accent-600;
 
         &::before {
             content: 'toggle_on';

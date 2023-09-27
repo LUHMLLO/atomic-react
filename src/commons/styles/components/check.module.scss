@@ -40,7 +40,7 @@
 		}
 
 		&:focus {
-			@apply text-emerald-600;
+			@apply text-accent-600;
 		}
 
 		&:active {
@@ -48,7 +48,7 @@
 		}
 
 		&:checked {
-			@apply text-emerald-600;
+			@apply text-accent-600;
 
 			&::before {
 				content: 'check_box';

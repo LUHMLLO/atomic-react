@@ -34,7 +34,7 @@ const Tabs: React.FC<TabsProps> = ({ variant, tabs, className }) => {
 					borderless
 					rounded
 					className={`${variant === 'rounded' ? 'rounded-5xs' : ''} ${
-						tab.active ? 'bg-emerald-600 text-accent-950' : ''
+						tab.active ? 'bg-accent-600 text-accent-950' : ''
 					}`}
 				/>
 			))}

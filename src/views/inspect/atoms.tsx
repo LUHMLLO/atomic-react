@@ -35,11 +35,11 @@ export default function Route(): JSX.Element {
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
-				<Spacer direction='horizontal' className='bg-emerald-600' />
+				<Spacer direction='horizontal' className='bg-accent-600' />
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
-				<Spacer direction='vertical' className='bg-emerald-600' />
+				<Spacer direction='vertical' className='bg-accent-600' />
 			</div>
 
 			{allowedTextTags.map((tag) => (

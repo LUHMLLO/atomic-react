@@ -34,7 +34,7 @@ const Field: React.FC<Props> = ({
 				className={`flex items-center gap-5xs rounded-5xs  max-w-full ${className} ${
 					borderless
 						? 'border-none p-0'
-						: 'px-xs py-2xs border-2 border-zinc-800 focus-within:border-emerald-600'
+						: 'px-xs py-2xs border-2 border-zinc-800 focus-within:border-accent-600'
 				}`}>
 				{leading_icon && (
 					<Icon name={leading_icon} filled={leading_icon_fill} />
