@@ -13,7 +13,7 @@ import Stepper from '@/components/organisms/stepper';
 import Tabs from '@/components/organisms/tabs';
 
 const DocBox =
-	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden';
+	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden relative';
 
 export default function Route(): JSX.Element {
 	return (
@@ -147,7 +147,7 @@ export default function Route(): JSX.Element {
 				</Collapsible>
 			</div>
 
-			<div className='relative flex flex-col items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden'>
+			<div className={`flex-col ${DocBox}`}>
 				<Dialog text='Just a Dialog' open>
 					<Text
 						tag='p'
@@ -156,13 +156,13 @@ export default function Route(): JSX.Element {
 				</Dialog>
 			</div>
 
-			<div className='relative flex flex-col items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden'>
+			<div className={`flex-col ${DocBox}`}>
 				<Dialog text='Normal Dialog with Figure' open>
 					<Figure src='/vite.svg' />
 				</Dialog>
 			</div>
 
-			<div className='relative flex flex-col items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden'>
+			<div className={`flex-col ${DocBox}`}>
 				<Dialog text='Fullscreen dialog' open fullscreen>
 					<Field placeholder='Name' leading_icon='person' />
 					<Field placeholder='E-Mail' leading_icon='mail' />

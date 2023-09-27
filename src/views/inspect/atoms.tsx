@@ -8,7 +8,7 @@ import Spacer from '@/components/atoms/spacer';
 import Text from '@/components/atoms/text';
 
 const DocBox =
-	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden';
+	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden relative';
 
 export default function Route(): JSX.Element {
 	return (

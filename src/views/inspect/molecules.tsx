@@ -12,7 +12,7 @@ import Tag from '@/components/molecules/tag';
 import Toast from '@/components/molecules/toast';
 
 const DocBox =
-	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden';
+	'flex items-center justify-center p-nm aspect-square outline-dashed outline-zinc-800 rounded-md gap-5xs overflow-hidden relative';
 
 export default function Route(): JSX.Element {
 	return (
