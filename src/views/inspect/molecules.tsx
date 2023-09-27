@@ -22,6 +22,7 @@ export default function Route(): JSX.Element {
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
+				<Button text='normal button active' active />
 				<Button text='normal button' />
 				<Button
 					leading_icon='person'
@@ -37,6 +38,7 @@ export default function Route(): JSX.Element {
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
+				<Button borderless text='borderless button active' active />
 				<Button borderless text='borderless button' />
 				<Button
 					borderless
@@ -54,6 +56,7 @@ export default function Route(): JSX.Element {
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>
+				<Button filled text='filled button active' active />
 				<Button filled text='filled button' />
 				<Button
 					filled

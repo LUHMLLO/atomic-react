@@ -3,7 +3,7 @@ import Icon from '@/components/atoms/icon';
 import Text from '@/components/atoms/text';
 
 interface Props {
-	alwaysHighlighted?: boolean;
+	active?: boolean;
 	borderless?: boolean;
 	className?: string;
 	filled?: boolean;
@@ -18,30 +18,40 @@ interface Props {
 }
 
 const Button: React.FC<Props> = ({
-	alwaysHighlighted = false,
-	borderless,
+	active = false,
+	borderless = false,
 	className,
-	filled,
+	filled = false,
 	leading_icon,
-	leading_icon_fill,
+	leading_icon_fill = false,
 	onClick,
-	rounded,
+	rounded = false,
 	text,
 	trailing_icon,
-	trailing_icon_fill,
+	trailing_icon_fill = false,
 	type,
 }) => {
+	const style_border = `outline outline-2 outline-${
+		active ? 'emerald-600' : 'neutral-400'
+	} `;
+
+	const style_noBorder = `text-${active ? 'emerald-600' : 'neutral-400'}`;
+
+	const style_filled = `bg-${active ? 'emerald-600' : 'neutral-800'} text-${
+		active ? 'emerald-950' : 'neutral-400'
+	}`;
+
 	return (
 		<button
 			type={type}
 			className={`
-				inline-flex items-center gap-3xs max-w-full font-bold text-5xl  
-				${borderless ? '' : 'outline outline-2 outline-zinc-800'} 
-				${!alwaysHighlighted && filled && 'bg-zinc-800 text-neutral-400'}
-				${alwaysHighlighted && filled && 'bg-emerald-600 text-emerald-950'}
-				${alwaysHighlighted && !filled && 'outline-emerald-600 text-neutral-400'}
+				inline-flex items-center gap-5xs max-w-full font-bold text-5xl  
+				
+				${borderless ? style_noBorder : style_border}
+				${filled && style_filled}		
+				
 				${rounded && 'rounded-5xs'} 
-				${text ? 'px-5xl py-sm' : 'p-5xs'}
+				${text ? 'px-sm py-xs' : 'p-5xs'}
 				${className}
 			`}
 			onClick={onClick}>
