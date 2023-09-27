@@ -56,7 +56,7 @@ export default function Route() {
 
 	return (
 		<div className='flex items-center w-screen h-screen'>
-			<div className='grid place-center w-full h-full bg-zinc-800'>
+			<div className='grid place-center w-full h-full bg-neutral-900'>
 				<Figure
 					src='https://vuero.cssninja.io/assets/station-d05ed495.svg'
 					className='h-[40rem] m-auto'
@@ -74,7 +74,7 @@ export default function Route() {
 						<Text tag='h1' text='Sign In' className='text-accent-600' />
 						<Text tag='p' text='Welcome back to your account.' />
 					</div>
-					<div className='border-2 border-zinc-700 rounded-5xs overflow-hidden p-nm gap-nm'>
+					<div className='border-2 border-neutral-900 rounded-5xs overflow-hidden p-nm gap-nm'>
 						<Field
 							label='Email Address'
 							leading_icon='email'
@@ -85,7 +85,7 @@ export default function Route() {
 							}
 						/>
 					</div>
-					<div className='border-2 border-zinc-700 rounded-5xs overflow-hidden p-nm gap-nm'>
+					<div className='border-2 border-neutral-900 rounded-5xs overflow-hidden p-nm gap-nm'>
 						<Field
 							label='Password'
 							leading_icon='lock'

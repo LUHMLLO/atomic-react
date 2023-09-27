@@ -9,7 +9,7 @@ export default function Route() {
 	return (
 		<div className='flex items-center w-screen h-screen overflow-hidden'>
 			<aside className='flex'>
-				<aside className='flex flex-col items-center gap-5xl p-2xl h-screen overflow-y-auto bg-zinc-900'>
+				<aside className='flex flex-col items-center gap-5xl p-2xl h-screen overflow-y-auto bg-neutral-900'>
 					<nav className='flex flex-col flex-grow items-center justify-end'>
 						<Figure src='/favicon.svg' className='w-[2.5rem]' />
 					</nav>
@@ -27,7 +27,7 @@ export default function Route() {
 						/>
 					</nav>
 				</aside>
-				{/* <aside className='flex flex-col items-center gap-5xl p-2xl h-screen overflow-y-auto bg-zinc-800'>
+				{/* <aside className='flex flex-col items-center gap-5xl p-2xl h-screen overflow-y-auto bg-neutral-800'>
 					<nav className='flex flex-col flex-grow items-center justify-end'>
 						<Figure src='/favicon.svg' className='w-[2.5rem]' />
 					</nav>
@@ -75,40 +75,34 @@ export default function Route() {
 
 					<span className='flex items-center gap-2xs'>
 						<Button borderless filled rounded text='View Reports' />
-						<Button
-							borderless
-							filled
-							rounded
-							text='Manage Shop'
-							alwaysHighlighted
-						/>
+						<Button borderless filled rounded text='Manage Shop' active />
 					</span>
 				</header>
 				<section className='flex flex-col gap-2xs'>
 					<ul className='grid grid-cols-4 gap-2xs'>
 						{Array.from({ length: 4 }).map((_, index) => (
-							<li className='aspect-square bg-zinc-800 rounded-5xs p-nm'>
+							<li className='aspect-square bg-neutral-800 rounded-5xs p-nm'>
 								{index}
 							</li>
 						))}
 					</ul>
 					<ul className='grid grid-cols-2 gap-2xs'>
 						{Array.from({ length: 2 }).map((_, index) => (
-							<li className='aspect-square bg-zinc-800 rounded-5xs p-nm'>
+							<li className='aspect-square bg-neutral-800 rounded-5xs p-nm'>
 								{index}
 							</li>
 						))}
 					</ul>
 					<ul className='grid grid-cols-2 gap-2xs'>
 						{Array.from({ length: 2 }).map((_, index) => (
-							<li className='aspect-video bg-zinc-800 rounded-5xs p-nm'>
+							<li className='aspect-video bg-neutral-800 rounded-5xs p-nm'>
 								{index}
 							</li>
 						))}
 					</ul>
 					<ul className='grid grid-cols-2 gap-2xs'>
 						{Array.from({ length: 2 }).map((_, index) => (
-							<li className='aspect-video bg-zinc-800 rounded-5xs p-nm'>
+							<li className='aspect-video bg-neutral-800 rounded-5xs p-nm'>
 								{index}
 							</li>
 						))}
