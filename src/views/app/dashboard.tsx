@@ -33,47 +33,55 @@ export default function Route() {
 						{
 							icon: '',
 							title: 'Total Sales',
-							amount: '$641.1K'
+							amount: '$641.1K',
 						},
 						{
 							icon: '',
 							title: 'Total Income',
-							amount: '$389.9K'
+							amount: '$389.9K',
 						},
 						{
 							icon: '',
 							title: 'New Order',
-							amount: '371'
+							amount: '371',
 						},
 						{
 							icon: '',
 							title: 'Abandonned',
-							amount: '29'
+							amount: '29',
 						},
 					].map((_, index) => (
-						<li className='aspect-square bg-neutral-800 rounded-5xs p-nm'>
+						<li
+							className='aspect-square bg-neutral-200 rounded-5xs p-nm'
+							key={index}>
 							{index}
 						</li>
 					))}
 				</ul>
 				<ul className='grid grid-cols-2 gap-2xs'>
-					{Array.from({ length: 2 }).map(() => (
-						<li className='aspect-square bg-neutral-800 rounded-5xs p-nm'>
-							<Chart chartType='line'/>
+					{Array.from({ length: 2 }).map((_, index) => (
+						<li
+							className='aspect-square bg-neutral-200 rounded-5xs p-nm'
+							key={index}>
+							<Chart chartType='line' />
 						</li>
 					))}
 				</ul>
 				<ul className='grid grid-cols-2 gap-2xs'>
-					{Array.from({ length: 2 }).map(() => (
-						<li className='aspect-video bg-neutral-800 rounded-5xs p-nm'>
-							<Chart chartType='line'/>
+					{Array.from({ length: 2 }).map((_, index) => (
+						<li
+							className='aspect-video bg-neutral-200 rounded-5xs p-nm'
+							key={index}>
+							<Chart chartType='line' />
 						</li>
 					))}
 				</ul>
 				<ul className='grid grid-cols-2 gap-2xs'>
-					{Array.from({ length: 2 }).map(() => (
-						<li className='aspect-video bg-neutral-800 rounded-5xs p-nm'>
-							<Chart chartType='line'/>
+					{Array.from({ length: 2 }).map((_, index) => (
+						<li
+							className='aspect-video bg-neutral-200 rounded-5xs p-nm'
+							key={index}>
+							<Chart chartType='line' />
 						</li>
 					))}
 				</ul>

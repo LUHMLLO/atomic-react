@@ -1,3 +1,4 @@
+import Layout from '@/layouts/auth';
 import React, { ChangeEvent, useState } from 'react';
 
 import Figure from '@/components/atoms/figure';
@@ -7,6 +8,7 @@ import Field from '@/components/molecules/field';
 import Link from '@/components/molecules/link';
 import Switchbox from '@/components/organisms/switchbox';
 import ThemeToggle from '@/components/widgets/themetoggle';
+import axios from 'axios';
 
 interface LoginData {
 	nombreUsuario: string;
@@ -31,16 +33,14 @@ export default function Route() {
 		};
 
 		try {
-			// Send a POST request to the API
-			const response = await fetch(apiUrl, {
-				method: 'POST',
+			// Send a POST request to the API using Axios
+			const response = await axios.post(apiUrl, data, {
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify(data),
 			});
 
-			if (response.ok) {
+			if (response.status === 200) {
 				// Handle successful login
 				// You can redirect the user or perform any other action here
 				console.log('Login successful');
@@ -55,57 +55,57 @@ export default function Route() {
 	};
 
 	return (
-		<div className='flex items-center w-screen h-screen'>
-			<div className='grid place-center w-full h-full bg-neutral-900'>
-				<Figure
-					src='https://vuero.cssninja.io/assets/station-d05ed495.svg'
-					className='h-[40rem] m-auto'
-				/>
-			</div>
+		<Layout>
 			<form
 				onSubmit={handleLogin}
-				className='flex flex-col items-center justify-center flex-shrink-0 gap-5xl w-[34vw] h-full'>
-				<nav className='flex items-center justify-between gap-5xs mx-auto w-[32rem]'>
+				className='relative flex flex-col align-center justify-center flex-grow flex-shrink-0 gap-5xl w-full max-w-[88%] mx-auto'>
+				<nav className='flex items-center justify-between gap-5xs '>
 					<Figure src='/favicon.svg' className='w-[4rem]' />
 					<ThemeToggle />
 				</nav>
-				<div className='flex flex-col gap-nm mx-auto w-[32rem]'>
-					<div>
+				<fieldset className='relative flex flex-col gap-nm overflow-hidden flex-shrink max-w-full'>
+					<header>
 						<Text tag='h1' text='Sign In' className='text-accent-600' />
 						<Text tag='p' text='Welcome back to your account.' />
-					</div>
-					<div className='border-2 border-neutral-900 rounded-5xs overflow-hidden p-nm gap-nm'>
-						<Field
-							label='Email Address'
-							leading_icon='email'
-							borderless
-							value={username}
-							onChange={(e: ChangeEvent<HTMLInputElement>) =>
-								setUsername(e.target.value)
-							}
+					</header>
+					<Field
+						label='Email Address'
+						leading_icon='email'
+						value={username}
+						onChange={(e: ChangeEvent<HTMLInputElement>) =>
+							setUsername(e.target.value)
+						}
+					/>
+					<Field
+						label='Password'
+						leading_icon='lock'
+						value={password}
+						onChange={(e: ChangeEvent<HTMLInputElement>) =>
+							setPassword(e.target.value)
+						}
+					/>
+					<div className='flex flex-wrap items-center justify-between overflow-hidden w-full'>
+						<Switchbox
+							label='Remember Me'
+							className='whitespace-nowrap flex-shrink-0 flex-grow'
+						/>
+						<Link
+							text='Forgot Password?'
+							className='whitespace-nowrap flex-shrink-0 flex-grow'
 						/>
 					</div>
-					<div className='border-2 border-neutral-900 rounded-5xs overflow-hidden p-nm gap-nm'>
-						<Field
-							label='Password'
-							leading_icon='lock'
-							borderless
-							value={password}
-							onChange={(e: ChangeEvent<HTMLInputElement>) =>
-								setPassword(e.target.value)
-							}
-						/>
-					</div>
-					<div className='flex items-center justify-between'>
-						<Switchbox label='Remember Me' />
-						<Link text='Forgot Password?' />
-					</div>
-				</div>
-				<footer className='flex items-center justify-center gap-4xs mx-auto w-[32rem]'>
-					<Button filled rounded active text='Confirm' type='submit' /> Or{' '}
-					<Link text='Create' alwaysHighlighted /> an account.
+				</fieldset>
+				<footer className='flex items-center gap-4xs'>
+					<Button
+						filled
+						active
+						text='Confirm'
+						type='submit'
+						className='rounded-5xl'
+					/>{' '}
+					Or <Link text='Create' alwaysHighlighted /> an account.
 				</footer>
 			</form>
-		</div>
+		</Layout>
 	);
 }

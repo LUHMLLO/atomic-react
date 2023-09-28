@@ -133,6 +133,10 @@
 	pre {
 		font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 	}
+
+	fieldset{
+		max-width: 100%;
+	}
 }
 
 @layer x-scss{

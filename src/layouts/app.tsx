@@ -11,7 +11,7 @@ function Layout({ children }: { children?: ReactNode }): JSX.Element {
 		<div className='flex items-center w-screen h-screen overflow-hidden'>
 			<aside className='flex flex-shrink-0 w-max h-full'>
 
-			<aside className='flex flex-col items-center gap-5xl p-2xl flex-shrink-0 w-max h-full overflow-y-auto bg-neutral-900'>
+			<aside className='flex flex-col items-center gap-5xl p-2xl flex-shrink-0 w-max h-full overflow-y-auto bg-neutral-100'>
 				<nav className='flex flex-col flex-grow items-center justify-end'>
 					<Figure src='/favicon.svg' className='w-[2.5rem]' />
 				</nav>

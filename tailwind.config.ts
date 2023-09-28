@@ -18,6 +18,9 @@ export default {
     },
 
     extend: {
+      gridTemplateColumns: {
+        'authLayout': '1fr minmax(auto, 24vw)',
+      },
       colors: {
         'accent': {
           50: '#E8FFE4',

@@ -38,10 +38,10 @@ const Field: React.FC<Props> = ({
 	`;
 
 	return (
-		<fieldset className='flex flex-col gap-5xs'>
+		<fieldset className='flex flex-col gap-5xs flex-shrink'>
 			{label && <Text tag='label' text={label} />}
 			<span
-				className={`flex items-center gap-5xs rounded-5xs max-w-full 
+				className={`inline-flex items-center gap-5xs rounded-5xs min-w-max max-w-full 
 					${borderless ? '' : states_outline}
 					${className} 
 				`}>
@@ -51,7 +51,7 @@ const Field: React.FC<Props> = ({
 				<input
 					type='text'
 					placeholder={placeholder}
-					className='flex-grow flex-shrink rounded-0 bg-transparent border-none outline-none '
+					className='inline-flex flex-grow flex-shrink rounded-0 bg-transparent border-none outline-none max-w-full text-ellipsis overflow-hidden p-0 '
 					value={value}
 					onChange={onChange}
 				/>

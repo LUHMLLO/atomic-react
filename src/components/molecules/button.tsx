@@ -32,15 +32,15 @@ const Button: React.FC<Props> = ({
 	type,
 }) => {
 	const states_filled = `
-		${active ? 'hover:bg-accent-400' : 'hover:bg-neutral-700'} 
-		${active ? 'bg-accent-500 text-accent-950' : 'bg-neutral-800'} 
-		${active ? 'active:bg-accent-600' : 'active:bg-neutral-900'} 
+		${active ? 'hover:bg-accent-400' : 'hover:bg-neutral-100'} 
+		${active ? 'bg-accent-500 text-accent-950' : 'bg-neutral-200'} 
+		${active ? 'active:bg-accent-600' : 'active:bg-neutral-300'} 
 	`;
 
 	const states_hollow = `
-		${active ? 'hover:text-accent-400' : 'hover:text-neutral-300'} 
-		${active ? 'text-accent-500' : 'bg-transparent text-neutral-400'} 
-		${active ? 'active:text-accent-600' : 'active:text-neutral-500'} 
+		${active ? 'hover:text-accent-400' : 'hover:text-neutral-800'} 
+		${active ? 'text-accent-500' : 'bg-transparent text-neutral-900'} 
+		${active ? 'active:text-accent-600' : 'active:text-neutral-950'} 
 	`;
 
 	const states_outline = `outline outline-2
