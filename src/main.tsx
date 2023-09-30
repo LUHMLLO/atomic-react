@@ -5,7 +5,7 @@ import '@/commons/styles/main.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import AppRoutes from '@/routes'; // Import the AppRoutes component
+import AppRoutes from '@/routes';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 
@@ -19,7 +19,6 @@ function renderApp(rootElement: HTMLElement | null) {
 		<React.StrictMode>
 			<Router>
 				<Suspense fallback={<div>Loading...</div>}>
-					{/* Use the AppRoutes component here */}
 					<AppRoutes />
 				</Suspense>
 			</Router>

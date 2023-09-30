@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import Index from './views/app/index';
-import Dashboard from './views/app/dashboard';
-import Login from './views/auth/login';
-import Inspect_Atoms from './views/inspect/atoms';
-import Inspect_Molecules from './views/inspect/molecules';
-import Inspect_Organisms from './views/inspect/organisms';
-import Inspect_Widgets from './views/inspect/widgets';
+import Index from '@/routes/app/index';
+import Dashboard from '@/routes/app/dashboard';
+import Login from '@/routes/auth/login';
+import Inspect_Atoms from '@/routes/inspect/atoms';
+import Inspect_Molecules from '@/routes/inspect/molecules';
+import Inspect_Organisms from '@/routes/inspect/organisms';
+import Inspect_Widgets from '@/routes/inspect/widgets';
 
 const AppRoutes = () => (
 	<Routes>
