@@ -27,7 +27,7 @@ function renderApp(rootElement: HTMLElement | null) {
 			<Router>
 				<Suspense fallback={<div>Loading...</div>}>
 					<Routes>
-						<Route path='/login' element={<Login />} />
+						<Route path='/auth/login' element={<Login />} />
 						<Route path='/' element={<Index />} />
 						<Route path='/dashboard' element={<Dashboard />} />
 						<Route path='/inspect/atoms' element={<Inspect_Atoms />} />

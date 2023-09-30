@@ -1,5 +1,10 @@
 import Layout from '@/layouts/auth';
 import React, { ChangeEvent, useState } from 'react';
+// import { useStore } from '@nanostores/react';
+
+// import { userStore } from '@/api/stores';
+import { LoginData } from '@/api/interfaces';
+import { Endpoint_Login } from '@/api/login.endpoint';
 
 import Figure from '@/components/atoms/figure';
 import Text from '@/components/atoms/text';
@@ -8,50 +13,22 @@ import Field from '@/components/molecules/field';
 import Link from '@/components/molecules/link';
 import Switchbox from '@/components/organisms/switchbox';
 import ThemeToggle from '@/components/widgets/themetoggle';
-import axios from 'axios';
-
-interface LoginData {
-	nombreUsuario: string;
-	claveUsuario: string;
-}
 
 export default function Route() {
-	// State to store the input values
+	// const { nombreUsuario } = useStore(userStore);
+
 	const [username, setUsername] = useState('js');
 	const [password, setPassword] = useState('123456');
 
-	// Function to handle form submission
 	const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		const apiUrl = 'http://ilotterypanel.com:3301/api/login';
-
-		// Create a JSON object with the data
 		const data: LoginData = {
 			nombreUsuario: username,
 			claveUsuario: password,
 		};
 
-		try {
-			// Send a POST request to the API using Axios
-			const response = await axios.post(apiUrl, data, {
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			});
-
-			if (response.status === 200) {
-				// Handle successful login
-				// You can redirect the user or perform any other action here
-				console.log('Login successful');
-			} else {
-				// Handle failed login
-				console.error('Login failed');
-			}
-		} catch (error) {
-			// Handle network or other errors
-			console.error('Error:', error);
-		}
+		await Endpoint_Login(data);
 	};
 
 	return (
@@ -66,7 +43,7 @@ export default function Route() {
 				<fieldset className='relative flex flex-col gap-nm overflow-hidden flex-shrink max-w-full'>
 					<header>
 						<Text tag='h1' text='Sign In' className='text-accent-600' />
-						<Text tag='p' text='Welcome back to your account.' />
+						<Text tag='p' text={`Welcome back {} to your account.`} />
 					</header>
 					<Field
 						label='Email Address'
@@ -85,14 +62,8 @@ export default function Route() {
 						}
 					/>
 					<div className='flex flex-wrap items-center justify-between overflow-hidden w-full'>
-						<Switchbox
-							label='Remember Me'
-							className='whitespace-nowrap flex-shrink-0 flex-grow'
-						/>
-						<Link
-							text='Forgot Password?'
-							className='whitespace-nowrap flex-shrink-0 flex-grow'
-						/>
+						<Switchbox label='Remember Me' />
+						<Link text='Forgot Password?' />
 					</div>
 				</fieldset>
 				<footer className='flex items-center gap-4xs'>
@@ -102,7 +73,7 @@ export default function Route() {
 						text='Confirm'
 						type='submit'
 						className='rounded-5xl'
-					/>{' '}
+					/>
 					Or <Link text='Create' alwaysHighlighted /> an account.
 				</footer>
 			</form>
