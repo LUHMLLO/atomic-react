@@ -15,9 +15,7 @@ export async function Endpoint_Login(data: LoginData) {
 		);
 
 		if (response.status === 201) {
-			const data = await response.data;
-			const user: User = data.user;
-
+			const user: User = await response.data;
 			setUser(user);
 
 			console.log('Login successful', response.data);

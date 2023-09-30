@@ -1,8 +1,8 @@
 import { atom } from 'nanostores';
 import { User } from './interfaces';
 
-export const userStore = atom<User | null>(null);
+export const $user = atom<User | null>(null);
 
-export function setUser(user: User): void {
-	userStore.set(user);
+export function setUser(user: User | null) {
+	$user.set(user);
 }

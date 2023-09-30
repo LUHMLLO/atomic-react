@@ -1,8 +1,9 @@
 import Layout from '@/layouts/auth';
 import React, { ChangeEvent, useState } from 'react';
-// import { useStore } from '@nanostores/react';
 
-// import { userStore } from '@/api/stores';
+import { useStore } from '@nanostores/react';
+import { $user } from '@/api/stores';
+
 import { LoginData } from '@/api/interfaces';
 import { Endpoint_Login } from '@/api/login.endpoint';
 
@@ -15,7 +16,7 @@ import Switchbox from '@/components/organisms/switchbox';
 import ThemeToggle from '@/components/widgets/themetoggle';
 
 export default function Route() {
-	// const { nombreUsuario } = useStore(userStore);
+	const user = useStore($user);
 
 	const [username, setUsername] = useState('js');
 	const [password, setPassword] = useState('123456');
@@ -43,7 +44,8 @@ export default function Route() {
 				<fieldset className='relative flex flex-col gap-nm overflow-hidden flex-shrink max-w-full'>
 					<header>
 						<Text tag='h1' text='Sign In' className='text-accent-600' />
-						<Text tag='p' text={`Welcome back {} to your account.`} />
+						<Text tag='p' text={`Welcome back to your account.`} />
+						<p>{user?.nombreUsuario}</p>
 					</header>
 					<Field
 						label='Email Address'
