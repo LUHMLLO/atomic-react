@@ -23,7 +23,7 @@ const Kbd: React.FC<Props> = ({
 }) => {
 	return (
 		<kbd
-			className={`inline-flex items-center justify-center px-4xs py-5xs rounded-5xs bg-neutral-100 outline outline-2 outline-neutral-200 text-neutral-500 ${className}`}>
+			className={`inline-flex items-center justify-center px-4xs py-5xs rounded-5xs bg-neutral-200 outline outline-2 outline-neutral-100 text-neutral-500 ${className}`}>
 			{leading && leading_variant === 'icon' && (
 				<Icon name={leading} filled={leading_filled} className='text-nm' />
 			)}

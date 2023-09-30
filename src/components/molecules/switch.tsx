@@ -19,7 +19,7 @@ const Checkbox: React.FC<Props> = ({
 			x-variant='switch'
 			x-icon={icon}
 			type='checkbox'
-			className={`${className}`}
+			className={`text-neutral-500 ${className}`}
 			style={Styles}
 			checked={isChecked}
 			onChange={() => setIsChecked(!isChecked)}

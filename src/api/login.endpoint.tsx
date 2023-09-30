@@ -5,7 +5,7 @@ import { setUser } from './stores';
 export async function Endpoint_Login(data: LoginData) {
 	try {
 		const response = await axios.post(
-			'http://ilotterypanel.com:3301/api/login',
+			import.meta.env.VITE_ENDPOINT_LOGIN,
 			data,
 			{
 				headers: {
