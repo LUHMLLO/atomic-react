@@ -1,3 +1,6 @@
+import { useStore } from '@nanostores/react';
+import { $user } from '@/api/stores';
+
 import Layout from '@/layouts/app';
 import Figure from '@/components/atoms/figure';
 import Text from '@/components/atoms/text';
@@ -5,6 +8,8 @@ import Button from '@/components/molecules/button';
 import Chart from '@/components/widgets/chart';
 
 export default function Route() {
+	const user = useStore($user);
+
 	return (
 		<Layout>
 			<header className='flex items-center justify-between'>
@@ -14,7 +19,7 @@ export default function Route() {
 						className='w-[3.5rem]'
 					/>
 					<span className='flex flex-col'>
-						<Text tag='h6' text='Welcome back, Erik Kovalsky' />
+						<Text tag='h6' text={`Welcome back, ${user?.nombrePersonal}`} />
 						<Text
 							tag='small'
 							text='We re very happy to see you again on your dashboard'

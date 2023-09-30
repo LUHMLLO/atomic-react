@@ -38,26 +38,26 @@ const Button: React.FC<Props> = ({
 	`;
 
 	const states_hollow = `
-		${active ? 'hover:text-accent-400' : 'hover:text-neutral-800'} 
-		${active ? 'text-accent-500' : 'bg-transparent text-neutral-900'} 
-		${active ? 'active:text-accent-600' : 'active:text-neutral-950'} 
+		${active ? 'hover:text-accent-400' : 'hover:text-neutral-700'} 
+		${active ? 'text-accent-500' : 'bg-transparent text-neutral-800'} 
+		${active ? 'active:text-accent-600' : 'active:text-neutral-900'} 
 	`;
 
 	const states_outline = `outline outline-2
 		${
 			active
 				? 'hover:outline-accent-400 hover:text-accent-400'
-				: 'hover:outline-inherit hover:text-neutral-300'
+				: 'hover:outline-neutral-600 hover:text-neutral-600'
 		} 
 		${
 			active
 				? 'outline-accent-500 text-accent-500'
-				: 'outline-inherit text-neutral-400'
+				: 'outline-neutral-700 text-neutral-700'
 		} 
 		${
 			active
 				? 'active:outline-accent-600 active:text-accent-600'
-				: 'active:outline-inherit active:text-neutral-500'
+				: 'active:outline-neutral-800 active:text-neutral-800'
 		} 
 	`;
 

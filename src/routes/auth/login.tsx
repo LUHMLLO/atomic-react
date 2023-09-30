@@ -1,12 +1,10 @@
-import Layout from '@/layouts/auth';
 import React, { ChangeEvent, useState } from 'react';
-
-import { useStore } from '@nanostores/react';
-import { $user } from '@/api/stores';
+import { useNavigate } from 'react-router-dom';
 
 import { LoginData } from '@/api/interfaces';
 import { Endpoint_Login } from '@/api/login.endpoint';
 
+import Layout from '@/layouts/auth';
 import Figure from '@/components/atoms/figure';
 import Text from '@/components/atoms/text';
 import Button from '@/components/molecules/button';
@@ -16,11 +14,10 @@ import Switchbox from '@/components/organisms/switchbox';
 import ThemeToggle from '@/components/widgets/themetoggle';
 
 export default function Route() {
-	const user = useStore($user);
-
 	const [username, setUsername] = useState('js');
 	const [password, setPassword] = useState('123456');
 
+	const navigate = useNavigate();
 	const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
@@ -29,7 +26,7 @@ export default function Route() {
 			claveUsuario: password,
 		};
 
-		await Endpoint_Login(data);
+		await Endpoint_Login(data, navigate);
 	};
 
 	return (
@@ -45,7 +42,6 @@ export default function Route() {
 					<header>
 						<Text tag='h1' text='Sign In' className='text-accent-600' />
 						<Text tag='p' text={`Welcome back to your account.`} />
-						<p>{user?.nombreUsuario}</p>
 					</header>
 					<Field
 						label='Email Address'

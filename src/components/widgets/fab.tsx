@@ -26,9 +26,9 @@ const Fab: React.FC<Props> = ({
 	type,
 }) => {
 	const states_filled = `
-		${active ? 'hover:bg-accent-400' : 'hover:bg-neutral-700'} 
-		${active ? 'bg-accent-500 text-accent-950' : 'bg-neutral-800'} 
-		${active ? 'active:bg-accent-600' : 'active:bg-neutral-900'} 
+		${active ? 'hover:bg-accent-400' : 'hover:bg-neutral-100'} 
+		${active ? 'bg-accent-500 text-accent-950' : 'bg-neutral-200'} 
+		${active ? 'active:bg-accent-600' : 'active:bg-neutral-300'} 
 	`;
 
 	const states_hollow = `

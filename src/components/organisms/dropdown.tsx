@@ -43,7 +43,7 @@ const Dropdown: React.FC<Props> = ({
 			className={`relative inline-flex flex-col gap-5xs ${className}`}>
 			<summary
 				className={`flex items-center gap-5xs min-w-full max-w-max cursor-pointer rounded-5xs ${
-					filled ? 'bg-neutral-900' : ''
+					filled ? 'bg-neutral-200' : ''
 				} ${text && !flat ? 'px-sm py-xs' : ''} ${
 					!text && !flat ? 'p-5xs' : ''
 				}`}>
@@ -56,7 +56,7 @@ const Dropdown: React.FC<Props> = ({
 			<ul
 				// ref={floating}
 				// style={floatingStyles}
-				className={`absolute mt-5xs flex flex-col gap-5xs p-5xs min-w-full max-w-max bg-neutral-900 rounded-5xs whitespace-nowrap`}>
+				className={`absolute mt-5xs flex flex-col gap-5xs p-5xs min-w-full max-w-max bg-neutral-200 rounded-5xs whitespace-nowrap`}>
 				{children}
 			</ul>
 		</details>

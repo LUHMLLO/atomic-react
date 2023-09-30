@@ -23,12 +23,12 @@ const Collapsible: React.FC<Props> = ({
 		<details
 			className={`
 				flex flex-col gap-1 w-full overflow-hidden rounded-5xs
-				${minimal ? '' : 'bg-neutral-900'} 
+				${minimal ? '' : 'bg-neutral-100'} 
 				${className}
 			`}>
 			<summary
 				className={`flex items-center gap-5xs w-full cursor-pointer ${
-					minimal ? '' : 'px-nm py-sm bg-neutral-800'
+					minimal ? '' : 'px-nm py-sm bg-neutral-200'
 				}`}>
 				{leading_icon && (
 					<Icon name={leading_icon} filled={leading_icon_filled} />
