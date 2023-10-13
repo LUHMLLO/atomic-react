@@ -1,5 +1,5 @@
 import PageLayout from '@/layouts/lab';
-import { allowedTextTags } from '@/commons/logic/atomicRules';
+import { allowedTextTags } from '@/commons/utils/allowedItems';
 import Check from '@/components/atoms/check';
 import Figure from '@/components/atoms/figure';
 import Icon from '@/components/atoms/icon';

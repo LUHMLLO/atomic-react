@@ -1,7 +1,8 @@
-import { $setNotification } from "@/commons/stores/notifications";
+
 import { AxiosError } from "axios";
-import { $setAccount } from "./account";
-import { ApiError } from "./_interfaces";
+import { $setToken } from "@/api/token";
+import { ApiError } from "@/commons/interfaces/errors";
+import { $setNotification } from "@/commons/stores/notifications";
 
 export function HandleApiError(error: unknown) {
     const err: AxiosError = error as AxiosError;
@@ -19,7 +20,7 @@ export function HandleApiError(error: unknown) {
             notification = { title: 'Error de peticion', content: data.message, icon: 'error' };
             break;
         case 401:
-            $setAccount(null);
+            $setToken(null);
             notification = { title: 'Error de autorizacion', content: data.message, icon: 'vpn_key_off' };
             break;
         case 500:

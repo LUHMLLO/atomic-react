@@ -1,5 +1,3 @@
-import '@/i18next';
-
 import '@/commons/styles/icons.scss';
 import '@/commons/styles/tailwind.scss';
 import '@/commons/styles/main.scss';
@@ -8,7 +6,6 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import AppRoutes from '@/routes';
 import { HashRouter as Router } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 

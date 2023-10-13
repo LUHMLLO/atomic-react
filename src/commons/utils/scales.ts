@@ -1,7 +1,3 @@
-/**
- * An object containing scale values used for styling components.
- * @type {Record<string, string>}
- */
 export const Scales: Record<string, string> = {
     '0': '0',
     '1': '0.0625rem',
@@ -24,12 +20,3 @@ export const Scales: Record<string, string> = {
     '4xl': '1.9254145824rem',
     '5xl': '2.1949726239rem',
 };
-
-
-// export const FontScales: Record<string, { size: string; lineHeight: string }> = Object.keys(Scales).reduce((result, key) => {
-//     result[key] = {
-//         size: Scales[key],
-//         lineHeight: '150%',
-//     };
-//     return result;
-// }, {} as Record<string, { size: string; lineHeight: string }>);

@@ -1,7 +1,9 @@
+import Layout from '@/layouts/app';
+
 export default function Route() {
 	return (
-		<div>
-			<h1>Route</h1>
-		</div>
+		<Layout>
+			<h1>Sellers</h1>
+		</Layout>
 	);
 }

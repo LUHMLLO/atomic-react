@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useStore } from '@nanostores/react';
 import { useEffect, useState } from 'react';
 import { $profile, GetProfile } from '@/api/profile';
-import { $account } from '@/api/account';
+import { $token } from '@/api/token';
 
 interface Props {
 	children?: JSX.Element | JSX.Element[];
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function Guard({ children, secured = true }: Props) {
-	const accountData = useStore($account);
+	const tokenData = useStore($token);
 	const profileData = useStore($profile);
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -18,7 +18,7 @@ export default function Guard({ children, secured = true }: Props) {
 
 	useEffect(() => {
 		const handleRedirect = () => {
-			if (!accountData) {
+			if (!tokenData) {
 				navigate('/auth/login');
 			} else if (!profileData) {
 				GetProfile();
@@ -34,7 +34,7 @@ export default function Guard({ children, secured = true }: Props) {
 			GetProfile();
 			setLoading(false);
 		}
-	}, [accountData, profileData, location.pathname, navigate, secured]);
+	}, [tokenData, profileData, location.pathname, navigate, secured]);
 
 	if (loading) {
 		return null;

@@ -21,7 +21,7 @@ export default function Route() {
 					<span className='flex flex-col text-center md:text-left'>
 						<Text
 							tag='h6'
-							text={`Welcome back, ${profileData?.nombrePersonal}`}
+							text={`Welcome back, ${profileData?.fullname}`}
 						/>
 
 						<small className='text-neutral-400'>

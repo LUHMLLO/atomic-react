@@ -35,21 +35,22 @@ const Pane_Menu: React.FC<Props> = () => {
 	// 	return `#/${link.toLocaleLowerCase()}`;
 	// }
 
-	function hashlink(link: string): string {
-		switch (link.toLocaleLowerCase()) {
-			case 'usuarios':
-				return '/#/users';
-			case 'mis datos':
-				return '/#/profile';
-			default:
-				return '/';
-		}
-	}
+	// function hashlink(link: string): string {
+	// 	switch (link.toLocaleLowerCase()) {
+	// 		case 'usuarios':
+	// 			return '/#/users';
+	// 		case 'mis datos':
+	// 			return '/#/profile';
+	// 		default:
+	// 			return '/';
+	// 	}
+	// }
 
 	return (
 		<>
 			<aside className='inline-flex flex-col gap-xl p-2xl h-full min-w-0 w-[14rem] bg-neutral-200 dark:bg-neutral-900'>
-				{profileData?.menues?.map((menu) => (
+				<h1>{profileData?.fullname}</h1>
+				{/* {profileData?.menues?.map((menu) => (
 					<React.Fragment key={menu.idmenu}>
 						<header className='flex items-center gap-5xs'>
 							<h6>{menu.nombremenu}</h6>
@@ -70,7 +71,7 @@ const Pane_Menu: React.FC<Props> = () => {
 							</section>
 						)}
 					</React.Fragment>
-				))}
+				))} */}
 			</aside>
 		</>
 	);

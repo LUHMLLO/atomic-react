@@ -1,14 +1,14 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { LoginData } from '@/api/_interfaces';
-import { GetAccount } from '@/api/account';
+import { GetToken } from '@/api/token';
 
 import Layout from '@/layouts/auth';
 import Figure from '@/components/atoms/figure';
 import Button from '@/components/molecules/button';
 import Field from '@/components/molecules/field';
 import ThemeToggle from '@/components/widgets/themetoggle';
+import { LoginDTO } from '@/commons/interfaces/dtos';
 
 export default function Route() {
 	const [username, setUsername] = useState('');
@@ -18,12 +18,12 @@ export default function Route() {
 	const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		const data: LoginData = {
-			nombreUsuario: username,
-			claveUsuario: password.trim(),
+		const data: LoginDTO = {
+			username: username,
+			password: password.trim(),
 		};
 
-		await GetAccount(data, navigate);
+		await GetToken(data, navigate);
 	};
 
 	return (

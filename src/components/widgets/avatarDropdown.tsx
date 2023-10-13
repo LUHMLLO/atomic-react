@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStore } from '@nanostores/react';
 
-import { $setAccount } from '@/api/account';
+import { $setToken } from '@/api/token';
 import { $profile } from '@/api/profile';
 
 import Dropdown from '@/components/organisms/dropdown';
@@ -38,10 +38,10 @@ const AvatarDropdown: React.FC<Props> = ({ className, position = 'right' }) => {
 					className='w-[4rem]'
 				/>
 				<div>
-					<p className='font-semibold'>{profile?.nombrePersonal}</p>
+					<p className='font-semibold'>{profile?.fullname}</p>
 					<p>
 						<small className='text-neutral-600 dark:text-neutral-300 font-semibold'>
-							{profile?.zona}
+							{profile?.email}
 						</small>
 					</p>
 				</div>
@@ -70,7 +70,7 @@ const AvatarDropdown: React.FC<Props> = ({ className, position = 'right' }) => {
 				filled
 				leading_icon='logout'
 				text='Log Out'
-				onClick={() => $setAccount(null)}
+				onClick={() => $setToken(null)}
 			/>
 		</Dropdown>
 	);

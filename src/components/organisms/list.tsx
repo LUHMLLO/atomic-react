@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { allowedLists } from '@/commons/logic/atomicRules';
+import { allowedLists } from '@/commons/utils/allowedItems';
 
 interface Props {
 	tag: string;
@@ -9,7 +9,7 @@ interface Props {
 
 const List: React.FC<Props> = ({ tag, className = '', children }) => {
 	if (!allowedLists.includes(tag)) {
-		throw new Error(`Invalid or unauthorized tag provided: ${tag}`);
+		throw new Error(`Invalid or untokenorized tag provided: ${tag}`);
 	}
 
 	return React.createElement(tag, { className: className }, children);

@@ -1,7 +1,3 @@
-/**
- * An array of allowed scales for styling components.
- * @type {string[]}
- */
 export const allowedScales: string[] = [
     '5xs',
     '4xs',
@@ -19,10 +15,6 @@ export const allowedScales: string[] = [
     '5xl',
 ];
 
-/**
- * An array of allowed HTML text tags.
- * @type {string[]}
- */
 export const allowedTextTags: string[] = [
     'b',
     // 'caption',
@@ -50,20 +42,12 @@ export const allowedTextTags: string[] = [
     'var',
 ];
 
-/**
- * An array of allowed HTML list tags.
- * @type {string[]}
- */
 export const allowedLists: string[] = [
     'ul',
     'ol',
     'dl',
 ];
 
-/**
- * An array of allowed HTML list item tags.
- * @type {string[]}
- */
 export const allowedListItems: string[] = [
     'li',
     'dt',

@@ -1,13 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 
 import Login from '@/routes/auth/login';
+import Signup from '@/routes/auth/signup';
 import Dashboard from '@/routes/app/dashboard';
-import {
-	UsersList,
-	UserDetails,
-	UserCreate,
-	
-} from '@/routes/app/users';
 import Profile from '@/routes/app/profile';
 import Settings from '@/routes/app/settings';
 
@@ -24,12 +19,11 @@ const AppRoutes = () => (
 		<Route path='/' element={<Login />} />
 		<Route path='/login' element={<Login />} />
 		<Route path='/auth/login' element={<Login />} />
-		<Route path='/dashboard' element={<Dashboard />} />
 
-		<Route path='/users' element={<UsersList />} />
-		<Route path='/users/:id' element={<UserDetails />} />
-		<Route path='/users/create' element={<UserCreate />} />
-		{/* <Route path='/users/update/:id' element={<UserUpdate />} /> */}
+		<Route path='/signup' element={<Signup />} />
+		<Route path='/auth/signup' element={<Signup />} />
+
+		<Route path='/dashboard' element={<Dashboard />} />
 
 		<Route path='/profile' element={<Profile />} />
 		<Route path='/settings' element={<Settings />} />
