@@ -15,10 +15,7 @@ export function $setToken(token: Token | null) {
     $token.set(token);
 }
 
-export async function GetToken(
-    data: LoginDTO,
-    navigate: (path: string) => void
-) {
+export async function GetToken(data: LoginDTO, navigate: (path: string) => void) {
     try {
         const response = await axios.post(
             import.meta.env.VITE_ENDPOINT_LOGIN,
@@ -31,12 +28,9 @@ export async function GetToken(
         );
 
         if (response.status === 201) {
-            const data = await response.data
-            const token: Token = data.token;
+            const token: Token = await response.data.payload.token;
             $setToken(token);
-
             GetProfile();
-
             $setNotification({ title: `Bienvenido de vuelta ${data.username}`, content: '', icon: 'check_circle' })
             navigate('/dashboard');
         }

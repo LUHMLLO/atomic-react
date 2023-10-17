@@ -25,7 +25,7 @@ export async function GetProfile() {
         );
 
         if (response.status === 200) {
-            const profile: Profile = await response.data.data;
+            const profile: Profile = await response.data.payload;
             $setProfile(profile);
         }
     } catch (error: unknown) {
