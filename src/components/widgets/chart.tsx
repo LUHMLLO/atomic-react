@@ -70,7 +70,7 @@ const ChartComponent: React.FC<Props> = ({ chartType }) => {
 
 	return (
 		<div className='w-full h-full overflow-hidden'>
-			<canvas ref={canvasRef} className='p-fixed inset w-100 h-100 bg-first' />
+			<canvas ref={canvasRef} />
 		</div>
 	);
 };
