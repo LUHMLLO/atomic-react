@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { allowedLists } from '@/commons/utils/allowedItems';
+import { allowedLists } from '@/common/utils/allowedItems.ts';
 
 interface Props {
 	tag: string;

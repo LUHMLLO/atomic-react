@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { atom } from 'nanostores';
-import { $token } from '@/api/token';
-import { $setNotification } from '@/commons/stores/notifications';
-import { User } from '@/commons/interfaces/users';
-import { HandleApiError } from '@/commons/utils/handleApiErrors';
-import { UserDTO } from '@/commons/interfaces/dtos';
+import { $token } from '@/api/token.ts';
+import { $setNotification } from '@/common/stores/notifications.ts';
+import { User } from '@/common/interfaces/users.ts';
+import { HandleApiError } from '@/common/utils/handleApiErrors.ts';
+import { UserDTO } from '@/common/interfaces/dtos.ts';
 
 export const $users = atom<User[]>([]);
 export const $userDetails = atom<User | null>(null);

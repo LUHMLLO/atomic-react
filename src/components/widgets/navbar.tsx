@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../molecules/button';
-import ThemeToggle from './themetoggle';
-import { $settings, $toggleSidebar } from '@/commons/stores/settings';
+import Button from '@/components/molecules/button.tsx';
+import ThemeToggle from '@/components/widgets/themetoggle.tsx';
+import { $settings, $toggleSidebar } from '@/common/stores/settings.ts';
 import { useStore } from '@nanostores/react';
-import AvatarDropdown from './avatarDropdown';
-import Figure from '../atoms/figure';
+import AvatarDropdown from '@/components/widgets/avatarDropdown.tsx';
+import Figure from '@/components/atoms/figure.tsx';
 
 interface Props {}
 

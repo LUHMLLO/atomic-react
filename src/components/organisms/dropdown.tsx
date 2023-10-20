@@ -8,7 +8,7 @@ import {
 	flip,
 	Placement,
 } from '@floating-ui/react-dom';
-import Icon from '@/components/atoms/icon';
+import Icon from '@/components/atoms/icon.tsx';
 
 interface Props {
 	active?: boolean;

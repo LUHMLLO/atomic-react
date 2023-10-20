@@ -2,7 +2,7 @@
 
 <http://ilotterypanel.com:3301/ilottery/api/docs#/>
 
-## Appname: Ilottery
+## Appname: atomic
 
 ```shell
 - public

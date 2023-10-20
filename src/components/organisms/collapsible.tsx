@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import Icon from '@/components/atoms/icon';
-import Text from '@/components/atoms/text';
+import Icon from '@/components/atoms/icon.tsx';
+import Text from '@/components/atoms/text.tsx';
 
 interface Props {
 	text: string;

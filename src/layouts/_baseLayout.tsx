@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { $settings } from '@/commons/stores/settings';
-import Notification from '@/components/widgets/notification';
-import Guard from './_authGuard';
+import { $settings } from '@/common/stores/settings.ts';
+import Notification from '@/components/widgets/notification.tsx';
+import Guard from '@/layouts/_authGuard.tsx';
 
 interface Props {
 	children?: JSX.Element | JSX.Element[];

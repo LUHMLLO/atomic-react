@@ -1,11 +1,11 @@
-import PageLayout from '@/layouts/lab';
-import { allowedTextTags } from '@/commons/utils/allowedItems';
-import Check from '@/components/atoms/check';
-import Figure from '@/components/atoms/figure';
-import Icon from '@/components/atoms/icon';
-import Radio from '@/components/atoms/radio';
-import Spacer from '@/components/atoms/spacer';
-import Text from '@/components/atoms/text';
+import PageLayout from '@/layouts/lab.tsx';
+import { allowedTextTags } from '@/common/utils/allowedItems.ts';
+import Check from '@/components/atoms/check.tsx';
+import Figure from '@/components/atoms/figure.tsx';
+import Icon from '@/components/atoms/icon.tsx';
+import Radio from '@/components/atoms/radio.tsx';
+import Spacer from '@/components/atoms/spacer.tsx';
+import Text from '@/components/atoms/text.tsx';
 
 const DocBox =
 	'flex items-center justify-center p-nm aspect-square outline-dashed outline-neutral-200 rounded-md gap-5xs overflow-hidden relative';

@@ -1,10 +1,10 @@
 
 // import React from 'react';
 // import Buttongroup from '@/components/organisms/buttongroup';
-// import Dropdown from '@/components/organisms/dropdown';
+// import Dropdown from '@/components/organisms/dropdown.tsx';
 // import { useNavigate } from 'react-router-dom';
-// import Check from '@/components/atoms/check';
-// import { User } from '@/commons/interfaces/users';
+// import Check from '@/components/atoms/check.tsx';
+// import { User } from '@/common/interfaces/users.ts';
 
 // interface ListProps {
 // 	headings: string[];

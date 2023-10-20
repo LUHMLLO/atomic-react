@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@/components/molecules/button';
+import Button from '@/components/molecules/button.tsx';
 
 interface Tab {
 	active?: boolean;

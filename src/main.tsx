@@ -1,10 +1,10 @@
-import '@/commons/styles/icons.scss';
-import '@/commons/styles/tailwind.scss';
-import '@/commons/styles/main.scss';
+import '@/common/styles/icons.scss';
+import '@/common/styles/tailwind.scss';
+import '@/common/styles/main.scss';
 
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import AppRoutes from '@/routes';
+import AppRoutes from '@/router.tsx';
 import { HashRouter as Router } from 'react-router-dom';
 
 const rootElement: HTMLElement | null = document.getElementById('root');

@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
-import { $setToken } from "@/api/token";
-import { $setNotification } from "@/commons/stores/notifications";
+import { $setToken } from '@/api/token.ts';
+import { $setNotification } from '@/common/stores/notifications.ts';
 
 export function HandleApiError(error: unknown) {
     const axios_error: AxiosError = error as AxiosError;

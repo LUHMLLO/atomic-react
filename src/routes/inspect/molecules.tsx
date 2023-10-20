@@ -1,15 +1,15 @@
-import PageLayout from '@/layouts/lab';
-import Badge from '@/components/molecules/badge';
-import Button from '@/components/molecules/button';
-import Checkbox from '@/components/molecules/checkbox';
-import Field from '@/components/molecules/field';
-import Kbd from '@/components/molecules/kbd';
-import Link from '@/components/molecules/link';
-import Radiobox from '@/components/molecules/radiobox';
-import Step from '@/components/molecules/step';
-import Switch from '@/components/molecules/switch';
-import Tag from '@/components/molecules/tag';
-import Toast from '@/components/molecules/toast';
+import PageLayout from '@/layouts/lab.tsx';
+import Badge from '@/components/molecules/badge.tsx';
+import Button from '@/components/molecules/button.tsx';
+import Checkbox from '@/components/molecules/checkbox.tsx';
+import Field from '@/components/molecules/field.tsx';
+import Kbd from '@/components/molecules/kbd.tsx';
+import Link from '@/components/molecules/link.tsx';
+import Radiobox from '@/components/molecules/radiobox.tsx';
+import Step from '@/components/molecules/step.tsx';
+import Switch from '@/components/molecules/switch.tsx';
+import Tag from '@/components/molecules/tag.tsx';
+import Toast from '@/components/molecules/toast.tsx';
 
 const DocBox =
 	'flex items-center justify-center p-nm aspect-square outline-dashed outline-neutral-200 rounded-md gap-5xs overflow-hidden relative';

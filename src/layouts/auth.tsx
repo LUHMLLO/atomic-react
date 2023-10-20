@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import BaseLayout from '@/layouts/_baseLayout';
-import Figure from '@/components/atoms/figure';
+import BaseLayout from '@/layouts/_baseLayout.tsx';
+import Figure from '@/components/atoms/figure.tsx';
 
 function Layout({ children }: { children?: ReactNode }): JSX.Element {
 	return (

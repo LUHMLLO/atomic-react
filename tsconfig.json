@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     /* src paths x intellisense */
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "/src/*"
       ]
     },
     /* JS options */
+    "allowJs": true,
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": [
@@ -15,11 +16,12 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "module": "ESNext",
+    "module": "NodeNext",
     "skipLibCheck": true,
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "NodeNext",
     "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -32,16 +34,16 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "src/**/*.js",
+    "src/**/*.d.js",
+    "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.astro"
   ],
   "exclude": [
     "node_modules"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ]
 }

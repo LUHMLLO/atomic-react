@@ -1,4 +1,4 @@
-import Layout from '@/layouts/app';
+import Layout from '@/layouts/app.tsx';
 
 export default function Route() {
 	return (

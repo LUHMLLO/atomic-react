@@ -1,5 +1,5 @@
 // import React, { useEffect, useState } from 'react';
-// import Dropdown from '@/components/organisms/dropdown';
+// import Dropdown from '@/components/organisms/dropdown.tsx';
 // import { Placement } from '@floating-ui/react-dom';
 // import { useStore } from '@nanostores/react';
 

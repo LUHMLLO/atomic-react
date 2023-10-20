@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Styles from '@/commons/styles/modules/radio.module.scss';
+import Styles from '@/common/styles/modules/radio.module.scss';
 
 interface Props {
 	groupName: string;

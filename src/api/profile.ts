@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { atom } from 'nanostores';
-import { $token } from '@/api/token';
-import { Profile } from '@/commons/interfaces/profiles';
-import { HandleApiError } from '@/commons/utils/handleApiErrors';
+import { $token } from '@/api/token.ts';
+import { Profile } from '@/common/interfaces/profiles.ts';
+import { HandleApiError } from '@/common/utils/handleApiErrors.ts';
 
 export const $profile = atom<Profile | null>(null);
 

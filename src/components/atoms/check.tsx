@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Styles from '@/commons/styles/modules/check.module.scss';
+import Styles from '@/common/styles/modules/check.module.scss';
 
 interface Props {
 	checked?: boolean;
