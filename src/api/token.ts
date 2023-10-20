@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { persistentAtom } from '@nanostores/persistent';
-import { GetProfile } from '@/api/profile.ts';
-import { $setNotification } from '@/common/stores/notifications.ts';
-import { Token } from '@/common/interfaces/tokens.ts';
-import { LoginDTO } from '@/common/interfaces/dtos.ts';
-import { HandleApiError } from '@/common/utils/handleApiErrors.ts';
+import { GetProfile } from '@api/profile.ts';
+import { $setNotification } from '@stores/notifications.ts';
+import { Token } from '@interfaces/tokens.ts';
+import { LoginDTO } from '@interfaces/dtos.ts';
+import { HandleApiError } from '@utils/handleApiErrors.ts';
 
 export const $token = persistentAtom<Token | null>('token', null, {
     encode: JSON.stringify,

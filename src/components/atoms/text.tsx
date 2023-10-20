@@ -1,5 +1,5 @@
 import React from 'react';
-import { allowedTextTags } from '@/common/utils/allowedItems.ts';
+import { allowedTextTags } from '@utils/allowedItems.ts';
 
 interface Props {
 	tag: string;

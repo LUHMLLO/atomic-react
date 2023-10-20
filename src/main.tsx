@@ -1,6 +1,6 @@
-import '@/common/styles/icons.scss';
-import '@/common/styles/tailwind.scss';
-import '@/common/styles/main.scss';
+import '@styles/icons.scss';
+import '@styles/tailwind.scss';
+import '@styles/main.scss';
 
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';

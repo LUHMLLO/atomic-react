@@ -1,7 +1,7 @@
 import React from 'react';
-import Icon from '@/components/atoms/icon.tsx';
-import Text from '@/components/atoms/text.tsx';
-import Spacer from '@/components/atoms/spacer.tsx';
+import Icon from '@components/atoms/icon.tsx';
+import Text from '@components/atoms/text.tsx';
+import Spacer from '@components/atoms/spacer.tsx';
 
 interface Props {
 	text: string;

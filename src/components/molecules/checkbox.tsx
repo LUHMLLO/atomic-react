@@ -1,6 +1,6 @@
 import React from 'react';
-import Check from '@/components/atoms/check.tsx';
-import Text from '@/components/atoms/text.tsx';
+import Check from '@components/atoms/check.tsx';
+import Text from '@components/atoms/text.tsx';
 
 interface Props {
 	text: string;

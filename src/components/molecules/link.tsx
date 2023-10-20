@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '@/components/atoms/icon.tsx';
+import Icon from '@components/atoms/icon.tsx';
 
 interface Props {
 	className?: string;

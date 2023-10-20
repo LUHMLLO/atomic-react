@@ -1,4 +1,4 @@
-import { $settings } from '@/common/stores/settings.ts';
+import { $settings } from '@stores/settings.ts';
 import { ReactNode, useEffect } from 'react';
 
 function Layout({ children }: { children?: ReactNode }): JSX.Element {

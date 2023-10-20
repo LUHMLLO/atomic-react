@@ -1,13 +1,13 @@
 // import React from 'react';
 // import { useStore } from '@nanostores/react';
 
-// import { $setToken } from '@/api/token.ts';
-// import { $profile } from '@/api/profile.ts';
+// import { $setToken } from '@api/token.ts';
+// import { $profile } from '@api/profile.ts';
 
-// import Dropdown from '@/components/organisms/dropdown.tsx';
-// import Figure from '@/components/atoms/figure.tsx';
-// import Link from '@/components/molecules/link.tsx';
-// import Button from '@/components/molecules/button.tsx';
+// import Dropdown from '@components/organisms/dropdown.tsx';
+// import Figure from '@components/atoms/figure.tsx';
+// import Link from '@components/molecules/link.tsx';
+// import Button from '@components/molecules/button.tsx';
 // import { Placement } from '@floating-ui/react-dom';
 
 // interface Props {

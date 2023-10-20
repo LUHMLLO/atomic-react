@@ -1,19 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Login from '@/routes/auth/login.tsx';
-import Signup from '@/routes/auth/signup.tsx';
+import Login from '@routes/auth/login.tsx';
+import Signup from '@routes/auth/signup.tsx';
 
-import Dashboard from '@/routes/app/dashboard.tsx';
-import Profile from '@/routes/app/profile.tsx';
-import Settings from '@/routes/app/settings.tsx';
+import Dashboard from '@routes/app/dashboard.tsx';
+import Profile from '@routes/app/profile.tsx';
+import Settings from '@routes/app/settings.tsx';
 
-import Inspect_Atoms from '@/routes/inspect/atoms.tsx';
-import Inspect_Molecules from '@/routes/inspect/molecules.tsx';
-import Inspect_Organisms from '@/routes/inspect/organisms.tsx';
-import Inspect_Widgets from '@/routes/inspect/widgets.tsx';
+import Inspect_Atoms from '@routes/inspect/atoms.tsx';
+import Inspect_Molecules from '@routes/inspect/molecules.tsx';
+import Inspect_Organisms from '@routes/inspect/organisms.tsx';
+import Inspect_Widgets from '@routes/inspect/widgets.tsx';
 
-import Error_404 from '@/routes/404.tsx';
-import Error_500 from '@/routes/500.tsx';
+import Error_404 from '@routes/404.tsx';
+import Error_500 from '@routes/500.tsx';
 
 const AppRoutes = () => (
 	<Routes>

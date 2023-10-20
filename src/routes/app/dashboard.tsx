@@ -1,11 +1,11 @@
 import { useStore } from '@nanostores/react';
 
-import Layout from '@/layouts/app.tsx';
-import Figure from '@/components/atoms/figure.tsx';
-import Text from '@/components/atoms/text.tsx';
-import Button from '@/components/molecules/button.tsx';
-import Chart from '@/components/widgets/chart.tsx';
-import { $profile } from '@/api/profile.ts';
+import Layout from '@layouts/app.tsx';
+import Figure from '@components/atoms/figure.tsx';
+import Text from '@components/atoms/text.tsx';
+import Button from '@components/molecules/button.tsx';
+import Chart from '@components/widgets/chart.tsx';
+import { $profile } from '@api/profile.ts';
 
 export default function Route() {
 	const profileData = useStore($profile);

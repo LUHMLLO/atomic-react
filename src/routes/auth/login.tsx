@@ -1,14 +1,14 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { GetToken } from '@/api/token.ts';
+import { GetToken } from '@api/token.ts';
 
-import Layout from '@/layouts/auth.tsx';
-import Figure from '@/components/atoms/figure.tsx';
-import Button from '@/components/molecules/button.tsx';
-import Field from '@/components/molecules/field.tsx';
-import ThemeToggle from '@/components/widgets/themetoggle.tsx';
-import { LoginDTO } from '@/common/interfaces/dtos.ts';
+import Layout from '@layouts/auth.tsx';
+import Figure from '@components/atoms/figure.tsx';
+import Button from '@components/molecules/button.tsx';
+import Field from '@components/molecules/field.tsx';
+import ThemeToggle from '@components/widgets/themetoggle.tsx';
+import { LoginDTO } from '@interfaces/dtos.ts';
 
 export default function Route() {
 	const [username, setUsername] = useState('');

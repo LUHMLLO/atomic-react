@@ -1,7 +1,7 @@
 import React, { ReactNode, useRef, useState } from 'react';
 
-import Text from '@/components/atoms/text.tsx';
-import Button from '@/components/molecules/button.tsx';
+import Text from '@components/atoms/text.tsx';
+import Button from '@components/molecules/button.tsx';
 
 interface DialogProps {
 	text: string;

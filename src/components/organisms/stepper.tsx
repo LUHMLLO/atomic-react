@@ -1,5 +1,5 @@
 import React from 'react';
-import Step from '@/components/molecules/step.tsx';
+import Step from '@components/molecules/step.tsx';
 
 interface Step {
 	name: string;

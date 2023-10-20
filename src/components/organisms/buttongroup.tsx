@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@/components/molecules/button.tsx';
+import Button from '@components/molecules/button.tsx';
 
 interface Props {
 	borderless?: boolean;

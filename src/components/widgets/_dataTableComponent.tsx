@@ -1,4 +1,4 @@
-// import { $settings } from '@/common/stores/settings.ts';
+// import { $settings } from '@stores/settings.ts';
 // import { useStore } from '@nanostores/react';
 // import React from 'react';
 // import DataTable, { TableColumn } from 'react-data-table-component';

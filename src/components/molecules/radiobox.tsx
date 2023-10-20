@@ -1,6 +1,6 @@
 import React from 'react';
-import Radio from '@/components/atoms/radio.tsx';
-import Text from '@/components/atoms/text.tsx';
+import Radio from '@components/atoms/radio.tsx';
+import Text from '@components/atoms/text.tsx';
 
 interface Props {
 	groupName: string;

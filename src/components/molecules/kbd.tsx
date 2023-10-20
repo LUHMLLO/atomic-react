@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '@/components/atoms/icon.tsx';
-import Text from '@/components/atoms/text.tsx';
+import Icon from '@components/atoms/icon.tsx';
+import Text from '@components/atoms/text.tsx';
 
 interface Props {
 	leading: string;

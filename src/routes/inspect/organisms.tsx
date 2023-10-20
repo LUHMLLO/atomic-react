@@ -1,16 +1,16 @@
-import PageLayout from '@/layouts/lab.tsx';
-import Figure from '@/components/atoms/figure.tsx';
-import Text from '@/components/atoms/text.tsx';
-import Field from '@/components/molecules/field.tsx';
-import Link from '@/components/molecules/link.tsx';
-import Breadcrumb from '@/components/organisms/breadcrumb.tsx';
-import Buttongroup from '@/components/organisms/buttongroup.tsx';
-import Collapsible from '@/components/organisms/collapsible.tsx';
-import Dialog from '@/components/organisms/dialog.tsx';
-import Dropdown from '@/components/organisms/dropdown.tsx';
-import List from '@/components/organisms/list.tsx';
-import Stepper from '@/components/organisms/stepper.tsx';
-import Tabs from '@/components/organisms/tabs.tsx';
+import PageLayout from '@layouts/lab.tsx';
+import Figure from '@components/atoms/figure.tsx';
+import Text from '@components/atoms/text.tsx';
+import Field from '@components/molecules/field.tsx';
+import Link from '@components/molecules/link.tsx';
+import Breadcrumb from '@components/organisms/breadcrumb.tsx';
+import Buttongroup from '@components/organisms/buttongroup.tsx';
+import Collapsible from '@components/organisms/collapsible.tsx';
+import Dialog from '@components/organisms/dialog.tsx';
+import Dropdown from '@components/organisms/dropdown.tsx';
+import List from '@components/organisms/list.tsx';
+import Stepper from '@components/organisms/stepper.tsx';
+import Tabs from '@components/organisms/tabs.tsx';
 
 const DocBox =
 	'flex items-center justify-center p-nm aspect-square outline-dashed outline-neutral-200 rounded-md gap-5xs overflow-hidden relative';

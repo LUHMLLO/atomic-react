@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '@/components/atoms/icon.tsx';
-import { $settings, $toggleTheme } from '@/common/stores/settings.ts';
+import Icon from '@components/atoms/icon.tsx';
+import { $settings, $toggleTheme } from '@stores/settings.ts';
 import { useStore } from '@nanostores/react';
 
 interface Props {}

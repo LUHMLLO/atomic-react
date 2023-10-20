@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '@/components/atoms/text.tsx';
-import Switch from '@/components/molecules/switch.tsx';
+import Text from '@components/atoms/text.tsx';
+import Switch from '@components/molecules/switch.tsx';
 
 interface Props {
 	checked?: boolean;

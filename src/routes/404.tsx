@@ -1,6 +1,6 @@
-import Text from '@/components/atoms/text.tsx';
-import Figure from '@/components/atoms/figure.tsx';
-import Button from '@/components/molecules/button.tsx';
+import Text from '@components/atoms/text.tsx';
+import Figure from '@components/atoms/figure.tsx';
+import Button from '@components/molecules/button.tsx';
 
 export default function Route() {
 	return (

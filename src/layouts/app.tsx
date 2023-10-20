@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
-import BaseLayout from '@/layouts/_baseLayout.tsx';
+import BaseLayout from '@layouts/_baseLayout.tsx';
 
-// import Fab from '@/components/widgets/fab';
-import { Sidebar } from '@/components/widgets/pane.tsx';
-import { Navbar } from '@/components/widgets/navbar.tsx';
+// import Fab from '@components/widgets/fab';
+import { Sidebar } from '@components/widgets/pane.tsx';
+import { Navbar } from '@components/widgets/navbar.tsx';
 
 function Layout({ children }: { children?: ReactNode }): JSX.Element {
 	return (

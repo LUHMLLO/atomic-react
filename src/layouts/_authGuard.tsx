@@ -1,8 +1,8 @@
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useStore } from '@nanostores/react';
 import { useEffect, useState } from 'react';
-import { $profile, GetProfile } from '@/api/profile.ts';
-import { $token } from '@/api/token.ts';
+import { $profile, GetProfile } from '@api/profile.ts';
+import { $token } from '@api/token.ts';
 
 interface Props {
 	children?: JSX.Element | JSX.Element[];

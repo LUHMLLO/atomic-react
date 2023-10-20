@@ -1,10 +1,10 @@
-import { $profile } from '@/api/profile.ts';
+import { $profile } from '@api/profile.ts';
 import { useStore } from '@nanostores/react';
 import React from 'react';
-import Link from '@/components/molecules/link.tsx';
-import Figure from '@/components/atoms/figure.tsx';
+import Link from '@components/molecules/link.tsx';
+import Figure from '@components/atoms/figure.tsx';
 import AvatarDropdown from './avatarDropdown.tsx';
-import { $settings, $toggleSidebar } from '@/common/stores/settings.ts';
+import { $settings, $toggleSidebar } from '@stores/settings.ts';
 
 interface Props {}
 

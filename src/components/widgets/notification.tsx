@@ -1,10 +1,10 @@
 import React from 'react';
-import Icon from '@/components/atoms/icon.tsx';
+import Icon from '@components/atoms/icon.tsx';
 import { useStore } from '@nanostores/react';
 import {
 	$notification,
 	$closeNotification,
-} from '@/common/stores/notifications.ts';
+} from '@stores/notifications.ts';
 
 interface Props {
 	className?: string;
