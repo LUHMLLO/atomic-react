@@ -30,7 +30,7 @@
       ],
       "@routes/*": [
         "src/routes/*"
-      ],
+      ]
     },
     /* JS options */
     "allowJs": true,
