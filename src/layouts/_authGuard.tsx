@@ -19,11 +19,15 @@ export default function Guard({ children, secured = true }: Props) {
 	useEffect(() => {
 		const handleRedirect = () => {
 			if (!tokenData) {
-				navigate('/auth/login');
-			} else if (!profileData) {
+				return navigate('/login');
+			}
+
+			if (!profileData) {
 				GetProfile();
-			} else if (['/', '/login', '/auth/login'].includes(location.pathname)) {
-				navigate('/dashboard');
+			}
+
+			if (profileData && ['/', '/login'].includes(location.pathname)) {
+				return navigate('/dashboard');
 			}
 
 			setLoading(false);
@@ -37,7 +41,7 @@ export default function Guard({ children, secured = true }: Props) {
 	}, [tokenData, profileData, location.pathname, navigate, secured]);
 
 	if (loading) {
-		return null;
+		return <div>Loading...</div>;
 	}
 
 	return <>{children}</>;

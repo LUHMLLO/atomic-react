@@ -5,7 +5,7 @@ export default {
   darkMode: ['class', '[data-mode="dark"]'],
   content: [
     "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.{html,js,ts,jsx,tsx,astro,vue}",
   ],
   theme: {
     borderRadius: Scales,

@@ -4,8 +4,8 @@ import '@styles/main.scss';
 
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import AppRoutes from '@/router.tsx';
-import { HashRouter as Router } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import router from '@/router.tsx';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 
@@ -17,11 +17,9 @@ function renderApp(rootElement: HTMLElement | null) {
 
 	ReactDOM.createRoot(rootElement).render(
 		<React.StrictMode>
-			<Router basename='/'>
-				<Suspense fallback={<div>Loading...</div>}>
-					<AppRoutes />
-				</Suspense>
-			</Router>
+			<Suspense fallback={<div>Loading...</div>}>
+				<RouterProvider router={router} />
+			</Suspense>
 		</React.StrictMode>
 	);
 }

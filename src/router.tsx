@@ -1,42 +1,66 @@
-import { Route, Routes } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
-import Login from '@routes/auth/login.tsx';
-import Signup from '@routes/auth/signup.tsx';
-
+import AuthLogin from '@routes/auth/login.tsx';
+import AuthSignup from '@routes/auth/signup.tsx';
 import Dashboard from '@routes/app/dashboard.tsx';
 import Profile from '@routes/app/profile.tsx';
 import Settings from '@routes/app/settings.tsx';
+import InspectAtoms from '@routes/inspect/atoms.tsx';
+import InspectMolecules from '@routes/inspect/molecules.tsx';
+import InspectOrganisms from '@routes/inspect/organisms.tsx';
+import InspectWidgets from '@routes/inspect/widgets.tsx';
+import Error500 from '@routes/500.tsx';
+import Error404 from '@routes/404.tsx';
 
-import Inspect_Atoms from '@routes/inspect/atoms.tsx';
-import Inspect_Molecules from '@routes/inspect/molecules.tsx';
-import Inspect_Organisms from '@routes/inspect/organisms.tsx';
-import Inspect_Widgets from '@routes/inspect/widgets.tsx';
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <AuthLogin />,
+	},
+	{
+		path: '/login',
+		element: <AuthLogin />,
+	},
+	{
+		path: '/signup',
+		element: <AuthSignup />,
+	},
+	{
+		path: '/dashboard',
+		element: <Dashboard />,
+	},
+	{
+		path: '/profile',
+		element: <Profile />,
+	},
+	{
+		path: '/settings',
+		element: <Settings />,
+	},
+	{
+		path: '/inspect/atoms',
+		element: <InspectAtoms />,
+	},
+	{
+		path: '/inspect/molecules',
+		element: <InspectMolecules />,
+	},
+	{
+		path: '/inspect/organisms',
+		element: <InspectOrganisms />,
+	},
+	{
+		path: '/inspect/widgets',
+		element: <InspectWidgets />,
+	},
+	{
+		path: '/500',
+		element: <Error500 />,
+	},
+	{
+		path: '*',
+		element: <Error404 />,
+	},
+]);
 
-import Error_404 from '@routes/404.tsx';
-import Error_500 from '@routes/500.tsx';
-
-const AppRoutes = () => (
-	<Routes>
-		<Route path='/' element={<Login />} />
-		<Route path='/login' element={<Login />} />
-		<Route path='/auth/login' element={<Login />} />
-
-		<Route path='/signup' element={<Signup />} />
-		<Route path='/auth/signup' element={<Signup />} />
-
-		<Route path='/dashboard' element={<Dashboard />} />
-
-		<Route path='/profile' element={<Profile />} />
-		<Route path='/settings' element={<Settings />} />
-
-		<Route path='/inspect/atoms' element={<Inspect_Atoms />} />
-		<Route path='/inspect/molecules' element={<Inspect_Molecules />} />
-		<Route path='/inspect/organisms' element={<Inspect_Organisms />} />
-		<Route path='/inspect/widgets' element={<Inspect_Widgets />} />
-
-		<Route path='*' element={<Error_404 />} />
-		<Route path='/500' element={<Error_500 />} />
-	</Routes>
-);
-
-export default AppRoutes;
+export default router;

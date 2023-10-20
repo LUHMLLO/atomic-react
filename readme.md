@@ -1,8 +1,4 @@
-# Api docs
-
-<http://ilotterypanel.com:3301/ilottery/api/docs#/>
-
-## Appname: atomic
+# Appname: atomic
 
 ```shell
 - public
