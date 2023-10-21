@@ -14,9 +14,9 @@ export default function Route(): JSX.Element {
 	return (
 		<PageLayout>
 			<div className={`flex-row ${DocBox}`}>
-				<Check checked />
-				<Check />
-				<Check />
+				<Check checked  />
+				<Check  />
+				<Check  />
 			</div>
 
 			<div className={`flex-col ${DocBox}`}>

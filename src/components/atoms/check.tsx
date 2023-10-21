@@ -4,11 +4,24 @@ import Styles from '@styles/modules/check.module.scss';
 interface Props {
 	checked?: boolean;
 	className?: string;
-	value?: string | number;
+	onChange?: (value: boolean) => void;
 }
 
-const Check: React.FC<Props> = ({ checked = false, className = '', value }) => {
+const Check: React.FC<Props> = ({
+	checked = false,
+	className = '',
+	onChange,
+}) => {
 	const [isChecked, setIsChecked] = useState(checked);
+
+	const handleChange = () => {
+		const state = !isChecked;
+		setIsChecked(state);
+
+		if (onChange) {
+			onChange(state);
+		}
+	};
 
 	return (
 		<input
@@ -16,8 +29,7 @@ const Check: React.FC<Props> = ({ checked = false, className = '', value }) => {
 			type='checkbox'
 			className={`${className} ${Styles}`}
 			checked={isChecked}
-			value={value}
-			onChange={() => setIsChecked(!isChecked)}
+			onChange={handleChange}
 		/>
 	);
 };
